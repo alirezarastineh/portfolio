@@ -35,6 +35,7 @@ export default function Education({}: Props) {
         mousewheel={{
           releaseOnEdges: true,
           forceToAxis: true,
+          eventsTarget: ".mySwiper",
         }}
         modules={[Pagination, Mousewheel]}
         className="mt-8 mySwiper w-full flex items-center justify-center overflow-x-scroll p-30 no-mousewheel"

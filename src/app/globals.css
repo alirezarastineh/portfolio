@@ -14,15 +14,6 @@
   }
 }
 
-.no-mousewheel {
-  touch-action: pan-y; /* Allow vertical scrolling */
-  pointer-events: none; /* Disable mouse events */
-}
-
-.no-mousewheel * {
-  pointer-events: auto; /* Re-enable mouse events for child elements */
-}
-
 .mySwiper::-webkit-scrollbar {
   display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 }
