@@ -31,3 +31,18 @@
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
 }
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #f7ac0ab9 !important;
+}
+
+/* Other bullets color */
+.mySwiper .swiper-pagination-bullet {
+  background-color: white !important; /* You can adjust the opacity as needed */
+}
+
+/* Navigation arrows color */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: white !important;
+}

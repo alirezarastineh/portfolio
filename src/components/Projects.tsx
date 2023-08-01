@@ -3,9 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel } from "swiper/modules";
+import { Mousewheel, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/mousewheel";
+import "swiper/css/navigation";
 import "../app/globals.css";
 
 type Props = {};
@@ -31,8 +32,9 @@ export default function Projects({}: Props) {
           releaseOnEdges: true,
           forceToAxis: true,
         }}
-        modules={[Mousewheel]}
-        className="relative w-full flex overflow-x-scroll overflow-hidden snap-x snap-mandatory z-20 no-mousewheel"
+        navigation={true}
+        modules={[Mousewheel, Navigation]}
+        className="mySwiper relative w-full flex overflow-x-scroll overflow-hidden snap-x snap-mandatory z-20 no-mousewheel"
       >
         {projects.map((project, i) => (
           <SwiperSlide key={project}>
