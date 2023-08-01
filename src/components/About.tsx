@@ -32,7 +32,7 @@ export default function About({}: Props) {
           duration: 1.2,
         }}
       >
-        <div className="top-[15px] sm:top-[80px] md:top-[90px] lg:top-[20px] xl:top-0 relative -mb-20 md:mb-0 flex-shrink-0 w-40 h-40 rounded-full sm:w-56 sm:h-56 md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[350px] xl:h-[450px] 2xl:w-[400px] 2xl:h-[500px] overflow-hidden">
+        <div className="top-[20px] sm:top-[80px] md:top-[90px] lg:top-[20px] xl:top-0 relative -mb-24 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full sm:w-56 sm:h-56 md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[350px] xl:h-[450px] 2xl:w-[400px] 2xl:h-[500px] overflow-hidden">
           <Image
             priority
             src="https://i.imgur.com/rbmFybY.jpg"
@@ -45,8 +45,8 @@ export default function About({}: Props) {
           />
         </div>
       </motion.div>
-      <div className="relative space-y-5 px-0 md:px-10 top-[10px] sm:top-[50px] md:top-[90px] lg:top-[20px] xl:top-0">
-        <h4 className="md:text-2xl xl:text-3xl 2xl:text-4xl text-xl font-semibold mt-1">
+      <div className="relative space-y-1 px-0 md:px-10 top-[50px] sm:top-[50px] md:top-[90px] lg:top-[20px] xl:top-0">
+        <h4 className="md:text-2xl xl:text-3xl 2xl:text-4xl text-xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
