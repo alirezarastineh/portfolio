@@ -3,7 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 type Props = {};
 
@@ -24,6 +26,11 @@ export default function Projects({}: Props) {
         spaceBetween={50}
         slidesPerView={1}
         centeredSlides={true}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+        }}
+        modules={[Pagination]}
         className="relative w-full flex overflow-x-scroll overflow-hidden snap-x snap-mandatory z-20"
       >
         {projects.map((project, i) => (
