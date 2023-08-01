@@ -45,9 +45,11 @@ export default function EducationCard({}: Props) {
                 priority
                 src="https://i.imgur.com/bA7yhT9.jpg"
                 alt=""
-                layout="fill"
+                fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                objectFit="cover"
+                style={{
+                  objectFit: "cover",
+                }}
               />
             </div>
             <div className="relative h-10 w-10 rounded-full overflow-hidden">
@@ -56,9 +58,11 @@ export default function EducationCard({}: Props) {
                 priority
                 src="https://i.imgur.com/bA7yhT9.jpg"
                 alt=""
-                layout="fill"
+                fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                objectFit="cover"
+                style={{
+                  objectFit: "cover",
+                }}
               />
             </div>
             <div className="relative h-10 w-10 rounded-full overflow-hidden">
@@ -67,9 +71,11 @@ export default function EducationCard({}: Props) {
                 priority
                 src="https://i.imgur.com/bA7yhT9.jpg"
                 alt=""
-                layout="fill"
+                fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                objectFit="cover"
+                style={{
+                  objectFit: "cover",
+                }}
               />
             </div>
           </div>

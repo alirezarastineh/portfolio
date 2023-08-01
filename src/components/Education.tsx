@@ -3,9 +3,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/mousewheel";
+import "../app/globals.css";
 import EducationCard from "./EducationCard";
 
 type Props = {};
@@ -30,8 +32,12 @@ export default function Education({}: Props) {
           dynamicBullets: true,
           clickable: true,
         }}
-        modules={[Pagination]}
-        className="mt-8 mySwiper w-full flex items-center justify-center overflow-x-scroll p-30"
+        mousewheel={{
+          releaseOnEdges: true,
+          forceToAxis: true,
+        }}
+        modules={[Pagination, Mousewheel]}
+        className="mt-8 mySwiper w-full flex items-center justify-center overflow-x-scroll p-30 no-mousewheel"
       >
         <SwiperSlide>
           <EducationCard />

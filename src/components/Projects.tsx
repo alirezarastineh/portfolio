@@ -3,9 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Mousewheel } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/mousewheel";
+import "../app/globals.css";
 
 type Props = {};
 
@@ -26,12 +27,12 @@ export default function Projects({}: Props) {
         spaceBetween={50}
         slidesPerView={1}
         centeredSlides={true}
-        pagination={{
-          dynamicBullets: true,
-          clickable: true,
+        mousewheel={{
+          releaseOnEdges: true,
+          forceToAxis: true,
         }}
-        modules={[Pagination]}
-        className="relative w-full flex overflow-x-scroll overflow-hidden snap-x snap-mandatory z-20"
+        modules={[Mousewheel]}
+        className="relative w-full flex overflow-x-scroll overflow-hidden snap-x snap-mandatory z-20 no-mousewheel"
       >
         {projects.map((project, i) => (
           <SwiperSlide key={project}>
