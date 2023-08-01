@@ -37,3 +37,11 @@
 .swiper-button-prev::after {
   color: white !important;
 }
+
+/* Hide navigation buttons for screens smaller than 640px */
+@media (max-width: 640px) {
+  .mySwiper .swiper-button-next,
+  .mySwiper .swiper-button-prev {
+    display: none !important;
+  }
+}
