@@ -38,13 +38,14 @@ export default function Projects({}: Props) {
       >
         {projects.map((project, i) => (
           <SwiperSlide key={project}>
-            <div className="mt-8 flex items-center justify-center h-screen">
+            <motion.div className="mt-8 flex items-center justify-center h-screen">
               <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-7 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
                 <motion.img
                   src="https://i.imgur.com/q33H9N3.png"
                   alt=""
                   initial={{
-                    y: -100,
+                    y: -300,
+                    opacity: 0,
                   }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2 }}
@@ -65,7 +66,7 @@ export default function Projects({}: Props) {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
