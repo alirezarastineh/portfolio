@@ -8,7 +8,6 @@ type Props = {};
 
 export default function EducationCard({}: Props) {
   return (
-    // SCROLL CONTAINER
     <div className="mt-16 flex items-center justify-center">
       <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-[#292929] opacity-40 hover:opacity-100 transition-opacity duration-200 scroll-smooth">
         <motion.div
