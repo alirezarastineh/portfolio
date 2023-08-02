@@ -21,7 +21,11 @@ type Inputs = {
 };
 
 export default function ContactMe({}: Props) {
-  const { register, handleSubmit } = useForm<Inputs>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     const templateParams = {
       to_name: "Alireza",
@@ -90,28 +94,28 @@ export default function ContactMe({}: Props) {
         >
           <div className="flex space-x-2">
             <input
-              {...register("name")}
+              {...register("name", { required: true })}
               placeholder="Name"
-              className="contactInput"
+              className={`contactInput ${errors.name && "border-red-500"}`}
               type="text"
             />
             <input
-              {...register("email")}
+              {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
               placeholder="Email"
-              className="contactInput"
+              className={`contactInput ${errors.email && "border-red-500"}`}
               type="email"
             />
           </div>
           <input
-            {...register("subject")}
+            {...register("subject", { required: true })}
             placeholder="Subject"
-            className="contactInput"
+            className={`contactInput ${errors.subject && "border-red-500"}`}
             type="text"
           />
           <textarea
-            {...register("message")}
+            {...register("message", { required: true })}
             placeholder="Message"
-            className="contactInput"
+            className={`contactInput ${errors.message && "border-red-500"}`}
           />
           <button
             type="submit"
