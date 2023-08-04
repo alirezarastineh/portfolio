@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import About from "@/components/About";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -10,6 +10,7 @@ import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
 import ArrowUpCircle from "@/components/ArrowUpCircle";
 import "../app/globals.css";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const heroRef: React.RefObject<HTMLElement> = useRef(null);
@@ -22,6 +23,36 @@ export default function Home() {
   const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const heroBottom = heroRef.current.getBoundingClientRect().bottom;
+
+        if (heroBottom <= 0) {
+          setShowArrow(true);
+        } else {
+          setShowArrow(false);
+        }
+      }
+    };
+
+    // Get the main scrolling container
+    const scrollingContainer = document.querySelector(".overflow-y-scroll");
+
+    // If found, attach the scroll event to the container
+    if (scrollingContainer) {
+      scrollingContainer.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (scrollingContainer) {
+        scrollingContainer.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
 
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden scrollbar-thin scrollbar-track-transparent transition-all custom-scrollbar">
@@ -51,14 +82,18 @@ export default function Home() {
         <ContactMe />
       </section>
 
-      <div className="fixed bottom-5 w-full flex justify-center items-center">
-        <div
-          onClick={() => scrollToSection(heroRef)}
-          className="cursor-pointer"
-        >
-          <ArrowUpCircle />
-        </div>
-      </div>
+      <AnimatePresence>
+        {showArrow && (
+          <div className="fixed bottom-5 w-full flex justify-center items-center">
+            <div
+              onClick={() => scrollToSection(heroRef)}
+              className="cursor-pointer"
+            >
+              <ArrowUpCircle />
+            </div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -19,8 +19,13 @@ export default function ArrowUpCircle({}: Props) {
         opacity: 1,
         scale: 1,
       }}
+      exit={{
+        y: 500,
+        opacity: 0,
+        scale: 0.5,
+      }}
       transition={{
-        duration: 1.5,
+        duration: 1,
       }}
     >
       <ArrowUpCircleIcon className="text-[#F7AB0A]/70 h-10 w-10 grayscale hover:grayscale-0 animate-pulse overflow-hidden" />
