@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
 import Link from "next/link";
-import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
+import ArrowUpCircle from "@/components/ArrowUpCircle";
 
 export default function Home() {
   return (
@@ -32,11 +32,9 @@ export default function Home() {
       </section>
 
       <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
-            <ArrowUpCircleIcon className="text-[#F7AB0A]/70 h-10 w-10 grayscale hover:grayscale-0 animate-pulse" />
-          </div>
-        </footer>
+        <div className="fixed bottom-5 w-full cursor-pointer flex justify-center items-center">
+          <ArrowUpCircle />
+        </div>
       </Link>
     </div>
   );
