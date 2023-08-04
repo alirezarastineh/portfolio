@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import "../app/globals.css";
 
 type Props = {};
 
@@ -13,8 +14,14 @@ export default function Header({}: Props) {
     setIsMounted(true);
   }, []);
 
-  const handleNavigation = () => {
-    window.location.href = "#contact";
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    const contactElement = document.querySelector("#contact");
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
