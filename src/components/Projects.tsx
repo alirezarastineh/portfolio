@@ -44,7 +44,7 @@ export default function Projects({}: Props) {
                   src="https://i.imgur.com/q33H9N3.png"
                   alt=""
                   initial={{
-                    y: -300,
+                    y: -250,
                     opacity: 0,
                   }}
                   whileInView={{ opacity: 1, y: 0 }}
