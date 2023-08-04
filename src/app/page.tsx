@@ -84,7 +84,7 @@ export default function Home() {
 
       <AnimatePresence>
         {showArrow && (
-          <div className="fixed bottom-5 w-full flex justify-center items-center">
+          <div className="fixed bottom-5 w-full flex justify-center items-center z-10">
             <div
               onClick={() => scrollToSection(heroRef)}
               className="cursor-pointer"
