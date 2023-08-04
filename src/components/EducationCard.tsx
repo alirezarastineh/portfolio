@@ -36,7 +36,7 @@ export default function EducationCard({}: Props) {
 
         <div className="px-0 md:px-10 cursor-pointer">
           <h4 className="text-3xl sm:text-4xl xl:text-3xl 2xl:text-4xl font-light">
-            CEO of CAB
+            CEO von CAB
           </h4>
           <p className="font-bold text-xl sm:text-2xl xl:text-xl 2xl:text-2xl mt-1">
             CAB
@@ -84,14 +84,14 @@ export default function EducationCard({}: Props) {
           </div>
 
           <p className="uppercase py-1 sm:py-5 text-gray-300">
-            Started... - Ended...
+            Begonnen... - Beendet...
           </p>
           <ul className="list-disc space-y-2 sm:space-y-4 xl:space-y-2 2xl:space-y-4 ml-5 text-md sm:text-lg">
-            <li>Summary points</li>
-            <li>Summary points</li>
-            <li>Summary points</li>
-            <li>Summary points</li>
-            <li>Summary points</li>
+            <li>Zusammenfassungspunkte</li>
+            <li>Zusammenfassungspunkte</li>
+            <li>Zusammenfassungspunkte</li>
+            <li>Zusammenfassungspunkte</li>
+            <li>Zusammenfassungspunkte</li>
           </ul>
         </div>
       </article>

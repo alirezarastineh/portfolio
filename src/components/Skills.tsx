@@ -19,7 +19,7 @@ export default function Skills({}: Props) {
         Skills
       </h3>
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm xl:top-28 2xl:top-56">
-        Hover over a skill for current proficiency
+        Hovern Sie über eine Fähigkeit, um die aktuelle Kenntnisstufe zu sehen
       </h3>
       <div className="xl:mt-48 grid grid-cols-4 gap-5">
         <Skill />

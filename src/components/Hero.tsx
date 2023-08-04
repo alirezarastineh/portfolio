@@ -13,9 +13,9 @@ type Props = {};
 export default function Hero({}: Props) {
   const [text, count] = useTypewriter({
     words: [
-      "Hi, The Name's Alireza Rastineh",
-      "Former-Professional-Sprinter.tsx",
-      "current= { junior: Front End Developer}",
+      "Hallo, mein Name ist Alireza Rastineh",
+      "Ehemaliger-Profi-Sprinter.tsx",
+      "derzeitiger = { junior: Frontend Entwickler }",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -50,7 +50,7 @@ export default function Hero({}: Props) {
       </div>
       <div className="z-20">
         <h2 className="flex justify-center text-sm sm:text-base uppercase text-white pb-2 tracking-[10px] sm:tracking-[15px]">
-          Front End Developer
+          Frontend Entwickler
         </h2>
         <div className="h-32">
           {" "}
@@ -62,12 +62,12 @@ export default function Hero({}: Props) {
         <div className="flex space-x-1 justify-center">
           <Link href="#about" passHref>
             <button onClick={smoothScroll("#about")} className="heroButton">
-              About
+              Über
             </button>
           </Link>
           <Link href="#education" passHref>
             <button onClick={smoothScroll("#education")} className="heroButton">
-              Education
+              Bildung
             </button>
           </Link>
           <Link href="#skills" passHref>
@@ -77,7 +77,7 @@ export default function Hero({}: Props) {
           </Link>
           <Link href="#projects" passHref>
             <button onClick={smoothScroll("#projects")} className="heroButton">
-              Projects
+              Projekte
             </button>
           </Link>
         </div>

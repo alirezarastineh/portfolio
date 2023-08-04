@@ -16,7 +16,7 @@ export default function About({}: Props) {
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden"
     >
       <h3 className="absolute top-16 sm:top-16 md:top-56 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
-        About
+        Über
       </h3>
       <motion.div
         initial={{
@@ -47,22 +47,25 @@ export default function About({}: Props) {
       </motion.div>
       <div className="relative space-y-1 sm:space-y-5 px-0 md:px-10 top-[50px] sm:top-[50px] md:top-[90px] lg:top-[20px] xl:top-0">
         <h4 className="md:text-2xl xl:text-3xl 2xl:text-4xl text-xl font-semibold">
-          Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
-          background
+          Hier ist ein{" "}
+          <span className="underline decoration-[#F7AB0A]/50">kleiner</span>{" "}
+          Hintergrund
         </h4>
-        <p className="text-sm lg:text-base xl:text-xl 2xl:text-2xl">
-          A Junior Front End Developer with B. Sc. & M. Sc. Degree in Computer
-          Engineering - Software from Islamic Azad University Sciences and
-          Researches Branch of Tehran and study experience in Digital Media &
-          Computing at University of Applied Sciences Berlin. Further skilled at
-          a Full Stack Development bootcamp at Code Academy Berlin. Focused
-          primarily on front end, I also possess a solid understanding of
-          backend development, enabling efficient, comprehensive solutions. I
-          adhere to protocols and ensure timely project completion. Proficient
-          in TypeScript, React, Tailwind CSS, Node.js, Express JS, MongoDB,
-          among others. Formerly a successful sprinter, aiming to become a
-          Senior Developer and eventually lead a blockchain company.
+        <p className="text-xs sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl">
+          Ein Junior Frontend-Entwickler mit einem B. Sc. & M. Sc. Abschluss in
+          Computer Engineering - Software von der Islamic Azad University
+          Sciences and Researches Branch in Teheran und Studienerfahrung in
+          Medieninformatik an der Hochschule für Technik und Wirtschaft Berlin.
+          Des Weiteren habe ich erfolgreich an einem Full-Stack Entwicklung
+          Weiterbildung an der Code Academy Berlin teilgenommen. Mein
+          Schwerpunkt liegt hauptsächlich auf Frontend-Entwicklung, aber ich
+          verfüge auch über solide Kenntnisse in Backend-Entwicklung, um
+          effiziente und umfassende Lösungen zu ermöglichen. Ich halte mich an
+          Protokolle und sorge für pünktliche Projektfertigstellung. Ich
+          beherrsche TypeScript, React, Tailwind CSS, Node.js, Express JS,
+          MongoDB und andere Technologien.Früher war ich erfolgreicher Sprinter
+          und strebe danach, ein Senior Developer zu werden und letztendlich ein
+          Blockchain-Unternehmen zu leiten.
         </p>
       </div>
     </motion.div>

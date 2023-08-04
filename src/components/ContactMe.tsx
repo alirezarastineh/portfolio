@@ -67,11 +67,11 @@ export default function ContactMe({}: Props) {
     <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center z-0 overflow-hidden">
       <ToastContainer />
       <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
-        Contact
+        Kontakt
       </h3>
       <div className="flex flex-col space-y-5">
         <h4 className="text-lg sm:text-4xl font-semibold text-center">
-          Do i have just what you need?{" "}
+          Habe ich genau das, was Sie brauchen?{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk!</span>
         </h4>
         <div className="space-y-2 sm:space-y-5">
@@ -85,7 +85,7 @@ export default function ContactMe({}: Props) {
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="sm:text-2xl">Berlin, Germany</p>
+            <p className="sm:text-2xl">Berlin, Deutschland</p>
           </div>
         </div>
         <form
@@ -115,20 +115,20 @@ export default function ContactMe({}: Props) {
           </div>
           <input
             {...register("subject", { required: true })}
-            placeholder="Subject"
+            placeholder="Betreff"
             className={`contactInput ${errors.subject && "border-red-500"}`}
             type="text"
           />
           <textarea
             {...register("message", { required: true })}
-            placeholder="Message"
+            placeholder="Nachricht"
             className={`contactInput ${errors.message && "border-red-500"}`}
           />
           <button
             type="submit"
             className="bg-[#F7AB0A]/40 hover:bg-[#F7AB0A] transition-all sm:py-5 py-2 sm:px-10 px-5 rounded-md text-gray-800 font-semibold sm:text-lg"
           >
-            Submit
+            Absenden
           </button>
         </form>
       </div>
