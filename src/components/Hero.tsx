@@ -6,6 +6,7 @@ import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import "../app/globals.css";
 
 type Props = {};
 
@@ -19,6 +20,13 @@ export default function Hero({}: Props) {
     loop: true,
     delaySpeed: 2000,
   });
+
+  const smoothScroll =
+    (href: string) => (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      e.preventDefault();
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -52,17 +60,25 @@ export default function Hero({}: Props) {
           </h1>
         </div>
         <div className="flex space-x-1 justify-center">
-          <Link href="#about">
-            <button className="heroButton">About</button>
+          <Link href="#about" passHref>
+            <button onClick={smoothScroll("#about")} className="heroButton">
+              About
+            </button>
           </Link>
-          <Link href="#education">
-            <button className="heroButton">Education</button>
+          <Link href="#education" passHref>
+            <button onClick={smoothScroll("#education")} className="heroButton">
+              Education
+            </button>
           </Link>
-          <Link href="#skills">
-            <button className="heroButton">Skills</button>
+          <Link href="#skills" passHref>
+            <button onClick={smoothScroll("#about")} className="heroButton">
+              Skills
+            </button>
           </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
+          <Link href="#projects" passHref>
+            <button onClick={smoothScroll("#projects")} className="heroButton">
+              Projects
+            </button>
           </Link>
         </div>
       </div>
