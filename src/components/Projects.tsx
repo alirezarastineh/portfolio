@@ -30,6 +30,7 @@ export default function Projects({}: Props) {
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
+        loop={true}
         centeredSlides={true}
         mousewheel={{
           releaseOnEdges: true,

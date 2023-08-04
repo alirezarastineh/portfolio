@@ -28,6 +28,7 @@ export default function Education({}: Props) {
         spaceBetween={350}
         slidesPerView={1}
         centeredSlides={true}
+        loop={true}
         pagination={{
           dynamicBullets: true,
           clickable: true,
