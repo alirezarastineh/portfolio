@@ -53,7 +53,7 @@ export default function Home() {
       }
     };
   }, []);
-
+  // test
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden scrollbar-thin scrollbar-track-transparent transition-all custom-scrollbar">
       <Header />
