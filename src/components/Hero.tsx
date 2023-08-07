@@ -36,7 +36,7 @@ export default function Hero({}: Props) {
       className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"
     >
       <BackgroundCircles />
-      <div className="relative h-32 w-32 sm:h-44 sm:w-44 mx-auto overflow-hidden rounded-[50%] object-cover">
+      <div className="relative h-32 w-32 sm:h-36 sm:w-36 overflow-hidden rounded-[50%]">
         <Image
           priority
           src="https://i.imgur.com/bA7yhT9.jpg"

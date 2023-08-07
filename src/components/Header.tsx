@@ -44,14 +44,18 @@ export default function Header({}: Props) {
           className="flex flex-row items-center"
         >
           <SocialIcon
+            className="grayscale hover:grayscale-0 transition-all ease-in-out duration-300"
             url="https://github.com/alirezarastineh"
-            fgColor="gray"
+            fgColor="#F7AB0A"
             bgColor="transparent"
+            style={{ opacity: 0.7 }}
           />
           <SocialIcon
+            className="grayscale hover:grayscale-0 transition-all ease-in-out duration-300"
             url="https://linkedin.com/in/alirezarastineh"
-            fgColor="gray"
+            fgColor="#F7AB0A"
             bgColor="transparent"
+            style={{ opacity: 0.7 }}
           />
         </motion.div>
       )}
@@ -75,12 +79,13 @@ export default function Header({}: Props) {
           className="flex flex-row items-center text-gray-300 cursor-pointer"
         >
           <SocialIcon
-            className="cursor-pointer"
+            className="grayscale hover:grayscale-0 transition-all ease-in-out duration-300"
             network="email"
-            fgColor="gray"
+            fgColor="#F7AB0A"
             bgColor="transparent"
+            style={{ opacity: 0.7 }}
           />
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+          <p className="uppercase hidden md:inline-flex text-sm text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300">
             Kontakt
           </p>
         </motion.div>

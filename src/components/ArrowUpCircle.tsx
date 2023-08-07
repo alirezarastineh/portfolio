@@ -28,7 +28,7 @@ export default function ArrowUpCircle({}: Props) {
         duration: 1,
       }}
     >
-      <ArrowUpCircleIcon className="text-[#F7AB0A]/70 h-10 w-10 grayscale hover:grayscale-0 animate-pulse overflow-hidden" />
+      <ArrowUpCircleIcon className="text-[#F7AB0A]/70 h-10 w-10 grayscale hover:grayscale-0 animate-pulse overflow-hidden transition-all ease-in-out duration-300" />
     </motion.div>
   );
 }

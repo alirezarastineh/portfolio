@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/navigation";
 import "../app/globals.css";
+import Image from "next/image";
 
 type Props = {};
 
@@ -44,9 +45,7 @@ export default function Projects({}: Props) {
           <SwiperSlide key={project}>
             <motion.div className="mt-8 flex items-center justify-center h-screen">
               <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 sm:space-y-7 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
-                <motion.img
-                  src="https://i.imgur.com/q33H9N3.png"
-                  alt=""
+                <motion.div
                   initial={{
                     y: -250,
                     opacity: 0,
@@ -54,8 +53,17 @@ export default function Projects({}: Props) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2 }}
                   viewport={{ once: true }}
-                  className="w-80 h-32 cursor-pointer md:w-96 md:h-48"
-                />
+                >
+                  <div className="relative w-56 h-32 md:w-96 md:h-48 cursor-pointer">
+                    <Image
+                      priority
+                      src="https://i.imgur.com/q33H9N3.png"
+                      alt=""
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                </motion.div>
                 <div className="space-y-0 sm:space-y-10 px-0 md:px-10 max-w-6xl cursor-pointer">
                   <h4 className="text-4xl font-semibold text-center">
                     <span className="underline decoration-[#F7AB0A]/50">

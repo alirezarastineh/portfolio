@@ -9,7 +9,7 @@ type Props = {};
 export default function EducationCard({}: Props) {
   return (
     <div className="relative mt-0 xl:mt-0 2xl:mt-16 flex items-center justify-center">
-      <article className="flex flex-col rounded-lg items-center space-y-7 xl:space-y-0 2xl:space-y-7 flex-shrink-0 h-[500px] sm:h-[650px] md:h-[700px] xl:h-[550px] 2xl:h-[700px] w-[500px] md:w-[600px] lg:w-[700px] xl:w-[900px] 2xl:w-[1100px] snap-center p-4 sm:p-10 xl:p-4 2xl:p-10 bg-[#292929] opacity-40 hover:opacity-100 transition-opacity duration-200 scroll-smooth">
+      <article className="flex flex-col rounded-lg items-center space-y-7 xl:space-y-0 2xl:space-y-7 flex-shrink-0 h-[500px] sm:h-[650px] md:h-[700px] xl:h-[550px] 2xl:h-[700px] w-[500px] md:w-[600px] lg:w-[700px] xl:w-[900px] 2xl:w-[1100px] snap-center p-4 sm:p-10 xl:p-4 2xl:p-10 bg-[#292929] opacity-40 hover:opacity-100 transition-opacity duration-200 scroll-smooth ease-in-out">
         <motion.div
           initial={{
             y: -100,
