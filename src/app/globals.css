@@ -54,6 +54,7 @@
   ) !important; /* Change this to your desired hover color */
 }
 
+
 @media (max-width: 640px) {
   .mySwiper .swiper-button-next,
   .mySwiper .swiper-button-prev {
