@@ -41,19 +41,13 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  transition: all 0.3s ease-in-out; /* Using "ease-in-out" as the timing function */
+  transition: all 0.3s ease-in-out;
 }
 
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
-  color: rgba(
-    247,
-    171,
-    10,
-    0.5
-  ) !important; /* Change this to your desired hover color */
+  color: rgba(247, 171, 10, 0.5) !important;
 }
-
 
 @media (max-width: 640px) {
   .mySwiper .swiper-button-next,
