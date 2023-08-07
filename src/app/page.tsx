@@ -39,10 +39,8 @@ export default function Home() {
       }
     };
 
-    // Get the main scrolling container
     const scrollingContainer = document.querySelector(".overflow-y-scroll");
 
-    // If found, attach the scroll event to the container
     if (scrollingContainer) {
       scrollingContainer.addEventListener("scroll", handleScroll);
     }
