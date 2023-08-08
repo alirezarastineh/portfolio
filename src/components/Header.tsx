@@ -58,14 +58,14 @@ export default function Header({}: Props) {
             style={{ opacity: 0.7 }}
           />
           <a
-            href="/public/Lebenslauf 2023.pdf"
+            href="/Lebenslauf%202023.pdf"
             download
             className="uppercase hidden md:inline-flex text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
           >
             Lebenslauf
           </a>
           <a
-            href="/public/Lebenslauf 2023.pdf"
+            href="/Lebenslauf%202023.pdf"
             download
             className="uppercase md:hidden inline-flex text-2xl text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
           >
