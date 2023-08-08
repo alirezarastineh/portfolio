@@ -42,7 +42,62 @@ export default function Education({}: Props) {
         className="mt-8 mySwiper w-full flex items-center justify-center overflow-x-scroll p-30 no-mousewheel"
       >
         <SwiperSlide>
+          <EducationCard
+            position="Full-Stack-Entwicklung Weiterbildung"
+            company="Code Academy Berlin"
+            imageUrl="https://i.imgur.com/QIe70hH.png"
+            summaryPoints={[
+              "6-Monate-Programm mit 840 Stunden",
+              "Anwendung von Agile/SCRUM",
+              "Betonung der Gruppenarbeit",
+              "Einschluss von Code Reviews, Spikes",
+              "Inklusion von Präsentationen",
+            ]}
+            startDate="03.2023"
+            endDate="08.2023"
+            xlImageSizeH="[200px]"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <EducationCard
+            position="B. Sc. Medieninformatik (Teilzeit)"
+            company="
+           HTW Berlin"
+            imageUrl="https://i.imgur.com/J37sKSY.png"
+            summaryPoints={["Bachelor-Auflagen für Master-Zulassung"]}
+            underSummaryPoints={[
+              [
+                "Computersysteme",
+                "Webprogrammierung",
+                "English 1 & 2 für Medienformatiker",
+                "Mathe 1 & 2 für Medienformatiker",
+                "Medienwirtschaft",
+                "...",
+              ],
+            ]}
+            startDate="04.2021"
+            endDate="03.2023"
+            xlImageSize="[250px]"
+            xxlImageSize="[350px]"
+            customWidth="w-[215px]"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <EducationCard
+            position="Software Development with Java"
+            company="
+            ReDI School"
+            imageUrl="https://i.imgur.com/GGo4X4r.png"
+            summaryPoints={["Abendkurs", "Teilzeit", "Hybrid"]}
+            startDate="02.2020"
+            endDate="06.2020"
+            xlImageSize="[150px]"
+            xxlImageSize="[200px]"
+          />
+        </SwiperSlide>
+        {/* <SwiperSlide>
           <EducationCard />
+        </SwiperSlide>
         </SwiperSlide>
         <SwiperSlide>
           <EducationCard />
@@ -52,7 +107,7 @@ export default function Education({}: Props) {
         </SwiperSlide>
         <SwiperSlide>
           <EducationCard />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </motion.div>
   );
