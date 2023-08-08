@@ -60,14 +60,14 @@ export default function Header({}: Props) {
           <a
             href="/Lebenslauf%202023.pdf"
             download
-            className="uppercase hidden md:inline-flex text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
+            className="uppercase hidden md:inline-flex ml-3 mt-1 text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
           >
             Lebenslauf
           </a>
           <a
             href="/Lebenslauf%202023.pdf"
             download
-            className="uppercase md:hidden inline-flex text-2xl text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
+            className="uppercase md:hidden inline-flex ml-3 mt-1 text-2xl text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
           >
             CV
           </a>
