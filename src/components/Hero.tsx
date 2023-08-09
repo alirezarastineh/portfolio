@@ -71,7 +71,7 @@ export default function Hero({}: Props) {
             </button>
           </Link>
           <Link href="#skills" passHref>
-            <button onClick={smoothScroll("#about")} className="heroButton">
+            <button onClick={smoothScroll("#skills")} className="heroButton">
               Skills
             </button>
           </Link>
