@@ -75,48 +75,6 @@ export default function EducationCard({
           <p className="font-bold text-center sm:text-left text-sm sm:text-2xl xl:text-xl 2xl:text-2xl mt-1">
             {company}
           </p>
-          {/* <div className="flex space-x-2 my-2">
-            <div className="relative h-10 w-10 rounded-full overflow-hidden">
-              <Image
-                className="absolute inset-0"
-                priority
-                src={imageUrl}
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            <div className="relative h-10 w-10 rounded-full overflow-hidden">
-              <Image
-                className="absolute inset-0"
-                priority
-                src="https://i.imgur.com/bA7yhT9.jpg"
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-            <div className="relative h-10 w-10 rounded-full overflow-hidden">
-              <Image
-                className="absolute inset-0"
-                priority
-                src="https://i.imgur.com/bA7yhT9.jpg"
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-          </div> */}
-
           <p className="uppercase py-1 sm:py-3 text-gray-300 text-center sm:text-left">
             {startDate} - {endDate}
           </p>
