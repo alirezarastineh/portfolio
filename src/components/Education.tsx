@@ -47,26 +47,28 @@ export default function Education({}: Props) {
             company="Code Academy Berlin"
             imageUrl="https://i.imgur.com/QIe70hH.png"
             summaryPoints={[
+              "Vollzeit",
               "6-Monate-Programm mit 840 Stunden",
               "Anwendung von Agile/SCRUM",
               "Betonung der Gruppenarbeit",
               "Einschluss von Code Reviews, Spikes",
-              "Inklusion von Präsentationen",
+              "Frontend: Typescript, React, Next, ...",
+              "Backend: Node, Express, MongoDB, ...",
             ]}
             startDate="03.2023"
             endDate="08.2023"
-            xlImageSizeH="xl:h-[200px]"
           />
         </SwiperSlide>
         <SwiperSlide>
           <EducationCard
-            position="B. Sc. Medieninformatik (Teilzeit)"
+            position="B. Sc. Medieninformatik"
             company="
            HTW Berlin"
             imageUrl="https://i.imgur.com/J37sKSY.png"
             summaryPoints={["Bachelor-Auflagen für Master-Zulassung"]}
             underSummaryPoints={[
               [
+                "Teilzeit",
                 "Computersysteme",
                 "Webprogrammierung",
                 "English 1 & 2 für Medienformatiker",
@@ -78,7 +80,7 @@ export default function Education({}: Props) {
             startDate="04.2021"
             endDate="03.2023"
             xlImageSize="xl:w-[250px]"
-            xxlImageSize="2xl:w-[350px]"
+            xxlImageSize="2xl:w-[320px]"
             customWidth="w-[215px]"
           />
         </SwiperSlide>
@@ -88,11 +90,73 @@ export default function Education({}: Props) {
             company="
             ReDI School"
             imageUrl="https://i.imgur.com/GGo4X4r.png"
-            summaryPoints={["Intro to Java", "Abendkurs", "Teilzeit", "Hybrid"]}
+            summaryPoints={["Teilzeit", "Abendkurs", "Hybrid", "Intro to Java"]}
             startDate="02.2020"
             endDate="06.2020"
             xlImageSize="xl:w-[150px]"
-            xxlImageSize="2xl:w-[200px]"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <EducationCard
+            position="M. Sc. Software Engineering"
+            company="
+            I.A.U. Science And Research Branch"
+            imageUrl="https://i.imgur.com/3bR3Yq9.png"
+            summaryPoints={[
+              "Fernstudium",
+              "Special Topics in Software",
+              "Database",
+              "Algorithms",
+              "Operating Systems",
+              "...",
+            ]}
+            startDate="09.2018"
+            endDate="07.2020"
+            customWidth="w-[100px]"
+            xlImageSize="xl:w-[120px]"
+            xxlImageSize="2xl:w-[140px]"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <EducationCard
+            position="Studienkolleg"
+            company="
+           HTW Berlin"
+            imageUrl="https://i.imgur.com/0VBSaCF.png"
+            summaryPoints={[
+              "Vollzeit",
+              "Grundlage der Informatik",
+              "Elementarmathematik ",
+              "Analysis Mathematik",
+              "Physik",
+              "...",
+            ]}
+            startDate="02.2016"
+            endDate="07.2017"
+            xlImageSize="xl:w-[255px]"
+            xxlImageSize="2xl:w-[320px]"
+            customWidth="w-[215px]"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <EducationCard
+            position="B. Sc. Software Engineering"
+            company="
+            I.A.U. Science And Research Branch"
+            imageUrl="https://i.imgur.com/3bR3Yq9.png"
+            summaryPoints={[
+              "Fernstudium",
+              "Data Storage",
+              "Database Design",
+              "Compiler Design",
+              "Artificial Intelligence",
+              "...",
+            ]}
+            startDate="09.2013"
+            endDate="07.2018"
+            customWidth="w-[100px]"
+            xlImageSize="xl:w-[120px]"
+            xxlImageSize="2xl:w-[140px]"
           />
         </SwiperSlide>
       </Swiper>
