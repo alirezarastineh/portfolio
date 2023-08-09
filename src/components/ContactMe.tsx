@@ -81,7 +81,12 @@ export default function ContactMe({}: Props) {
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="sm:text-2xl">alirezarastineh95@gmail.com</p>
+            <a
+              href="mailto:alirezarastineh95@gmail.com"
+              className="sm:text-2xl"
+            >
+              alirezarastineh95@gmail.com
+            </a>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
