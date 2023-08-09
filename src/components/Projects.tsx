@@ -9,11 +9,11 @@ import "swiper/css/mousewheel";
 import "swiper/css/navigation";
 import "../app/globals.css";
 import Image from "next/image";
+import { projects } from "./Project";
 
 type Props = {};
 
 export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ export default function Projects({}: Props) {
         className="mySwiper relative w-full flex overflow-x-scroll overflow-hidden snap-x snap-mandatory z-20 no-mousewheel"
       >
         {projects.map((project, i) => (
-          <SwiperSlide key={project}>
+          <SwiperSlide key={project.id}>
             <motion.div className="mt-8 flex items-center justify-center h-screen">
               <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 sm:space-y-7 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
                 <motion.div
@@ -54,28 +54,45 @@ export default function Projects({}: Props) {
                   transition={{ duration: 1.2 }}
                   viewport={{ once: true }}
                 >
-                  <div className="relative w-56 h-32 md:w-96 md:h-48 cursor-pointer">
+                  <div className="relative w-56 h-28 md:w-96 md:h-48 2xl:w-[500px] 2xl:h-[250px] cursor-pointer">
                     <Image
                       priority
-                      src="https://i.imgur.com/q33H9N3.png"
-                      alt=""
+                      src={project.imageUrl}
+                      alt={project.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                 </motion.div>
-                <div className="space-y-0 sm:space-y-10 px-0 md:px-10 max-w-6xl cursor-pointer">
-                  <h4 className="text-4xl font-semibold text-center">
+                <div className="space-y-2 sm:space-y-5 px-0 md:px-10 max-w-6xl cursor-pointer">
+                  <h4 className="text-xl sm:text-4xl font-semibold text-center">
                     <span className="underline decoration-[#F7AB0A]/50">
                       Projekt {i + 1} von {projects.length}:
                     </span>{" "}
-                    Cryptocurrency Club
+                    {project.title}
                   </h4>
-                  <p className="text-lg text-center md:text-left">
-                    Eine Webseite zur Überprüfung der Top 10 Kryptowährungs mit
-                    ihren Echtzeit-Statistiken. Sie beinhaltet eine
-                    Authentifizierung mit der Option, dass Benutzer Coins für
-                    ihre Wish List auswählen können.
+                  <div className="flex space-x-2 my-2 items-center justify-center">
+                    {project.images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="relative h-10 w-10 overflow-hidden"
+                      >
+                        <Image
+                          className="absolute inset-0"
+                          priority
+                          src={image}
+                          alt=""
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          style={{
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <p className="sm:text-lg text-center md:text-left">
+                    {project.description}
                   </p>
                 </div>
               </div>

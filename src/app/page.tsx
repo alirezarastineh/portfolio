@@ -6,11 +6,11 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Education from "@/components/Education";
 import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
 import ArrowUpCircle from "@/components/ArrowUpCircle";
 import "../app/globals.css";
 import { AnimatePresence } from "framer-motion";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   const heroRef: React.RefObject<HTMLElement> = useRef(null);
