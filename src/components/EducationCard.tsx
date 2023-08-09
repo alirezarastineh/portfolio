@@ -117,15 +117,15 @@ export default function EducationCard({
             </div>
           </div> */}
 
-          <p className="uppercase py-1 sm:py-5 text-gray-300 text-center sm:text-left">
+          <p className="uppercase py-1 sm:py-3 text-gray-300 text-center sm:text-left">
             {startDate} - {endDate}
           </p>
-          <ul className="list-disc space-y-2 sm:space-y-4 xl:space-y-2 2xl:space-y-4 ml-5 text-sm sm:text-lg">
+          <ul className="list-disc space-y-2 sm:space-y-4 xl:space-y-0 2xl:space-y-3 ml-5 text-sm sm:text-lg">
             {summaryPoints.map((point, index) => (
               <li key={point}>
                 {point}
                 {underSummaryPoints?.[index] && (
-                  <ul className="list-disc space-y-2 sm:space-y-3 xl:space-y-1 2xl:space-y-2 ml-5 text-sm sm:text-lg">
+                  <ul className="list-disc space-y-2 sm:space-y-3 xl:space-y-0 2xl:space-y-2 ml-5 text-sm sm:text-lg">
                     {underSummaryPoints[index].map((subPoint) => (
                       <li key={subPoint}>{subPoint}</li>
                     ))}

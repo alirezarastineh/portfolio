@@ -121,7 +121,7 @@ export default function Education({}: Props) {
           <EducationCard
             position="Studienkolleg"
             company="
-           HTW Berlin"
+           Technische Universität Berlin"
             imageUrl="https://i.imgur.com/0VBSaCF.png"
             summaryPoints={[
               "Vollzeit",
