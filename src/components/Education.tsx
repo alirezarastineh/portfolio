@@ -55,7 +55,7 @@ export default function Education({}: Props) {
             ]}
             startDate="03.2023"
             endDate="08.2023"
-            xlImageSizeH="[200px]"
+            xlImageSizeH="xl:h-[200px]"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -77,8 +77,8 @@ export default function Education({}: Props) {
             ]}
             startDate="04.2021"
             endDate="03.2023"
-            xlImageSize="[250px]"
-            xxlImageSize="[350px]"
+            xlImageSize="xl:w-[250px]"
+            xxlImageSize="2xl:w-[350px]"
             customWidth="w-[215px]"
           />
         </SwiperSlide>
@@ -88,26 +88,13 @@ export default function Education({}: Props) {
             company="
             ReDI School"
             imageUrl="https://i.imgur.com/GGo4X4r.png"
-            summaryPoints={["Abendkurs", "Teilzeit", "Hybrid"]}
+            summaryPoints={["Intro to Java", "Abendkurs", "Teilzeit", "Hybrid"]}
             startDate="02.2020"
             endDate="06.2020"
-            xlImageSize="[150px]"
-            xxlImageSize="[200px]"
+            xlImageSize="xl:w-[150px]"
+            xxlImageSize="2xl:w-[200px]"
           />
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <EducationCard />
-        </SwiperSlide>
-        </SwiperSlide>
-        <SwiperSlide>
-          <EducationCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EducationCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <EducationCard />
-        </SwiperSlide> */}
       </Swiper>
     </motion.div>
   );

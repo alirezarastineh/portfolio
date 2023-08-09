@@ -47,11 +47,11 @@ export default function EducationCard({
         >
           <div
             className={`relative ${customWidth || "w-32"} 
-            h-32 xl:w-${xlImageSize || "[200px]"} xl:h-${
-              xlImageSizeH || "[150px]"
-            } 2xl:w-${xxlImageSize || "[200px]"} 
-            2xl:h-${
-              xxlImageSizeH || "[200px]"
+            h-32 ${xlImageSize || "xl:w-[200px]"} ${
+              xlImageSizeH || "xl:h-[150px]"
+            } ${xxlImageSize || "2xl:w-[200px]"} 
+            ${
+              xxlImageSizeH || "2xl:h-[200px]"
             } object-cover object-center cursor-pointer overflow-hidden`}
           >
             <Image
