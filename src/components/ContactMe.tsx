@@ -69,7 +69,7 @@ export default function ContactMe({}: Props) {
       <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
         Kontakt
       </h3>
-      <div className="flex flex-col space-y-5">
+      <div className="flex flex-col space-y-3 sm:space-y-5 relative top-5">
         <h4 className="text-lg sm:text-4xl font-semibold text-center">
           Habe ich genau das, was Sie brauchen?{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk!</span>
@@ -127,7 +127,10 @@ export default function ContactMe({}: Props) {
           <textarea
             {...register("message", { required: true })}
             placeholder="Nachricht"
-            className={`contactInput ${errors.message && "border-red-500"}`}
+            className={`contactInput custom-scrollbar ${
+              errors.message && "border-red-500"
+            }`}
+            style={{ resize: "none", height: "110px" }}
           />
           <button
             type="submit"
