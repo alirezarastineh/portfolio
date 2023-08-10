@@ -108,7 +108,7 @@ export default function Header({}: Props) {
             bgColor="transparent"
             style={{ opacity: 0.7 }}
           />
-          <p className="uppercase hidden md:inline-flex text-sm text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300">
+          <p className="uppercase hidden md:inline-flex text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300">
             Kontakt
           </p>
         </motion.div>
