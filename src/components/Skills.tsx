@@ -26,11 +26,11 @@ export default function Skills({}: Props) {
         <Skill percentage={65} imageUrl="https://i.imgur.com/lmNHoXw.png" />
         <Skill percentage={50} imageUrl="https://i.imgur.com/UZMww1q.png" />
         <Skill percentage={45} imageUrl="https://i.imgur.com/IvdoND0.png" />
-        <Skill percentage={45} imageUrl="https://i.imgur.com/Jx7gRFU.png" />
+        <Skill percentage={40} imageUrl="https://i.imgur.com/Jx7gRFU.png" />
+        <Skill percentage={35} imageUrl="https://i.imgur.com/Eonjo5f.png" />
         <Skill percentage={35} imageUrl="https://i.imgur.com/AelwhLw.png" />
         <Skill percentage={60} imageUrl="https://i.imgur.com/taH2fNN.png" />
         <Skill percentage={50} imageUrl="https://i.imgur.com/6bxEQ9s.png" />
-        <Skill percentage={35} imageUrl="https://i.imgur.com/aGQxmlp.png" />
         <Skill percentage={35} imageUrl="https://i.imgur.com/F4QkDAV.png" />
         <Skill percentage={35} imageUrl="https://i.imgur.com/E2gonVz.png" />
         <Skill percentage={40} imageUrl="https://i.imgur.com/LqZKvdX.png" />
