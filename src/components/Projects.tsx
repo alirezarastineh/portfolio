@@ -56,7 +56,7 @@ export default function Projects({}: Props) {
                   viewport={{ once: true }}
                 >
                   <a href={project.link} target="_blank" rel="noreferrer">
-                    <div className="relative w-56 h-28 md:w-96 md:h-48 2xl:w-[500px] 2xl:h-[250px]">
+                    <div className="relative w-56 h-28 md:w-96 md:h-48 2xl:w-[500px] 2xl:h-[250px] transition-all duration-300 hover:brightness-[.65]">
                       <Image
                         priority
                         src={project.imageUrl}
