@@ -83,7 +83,7 @@ export default function ContactMe({}: Props) {
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <a
               href="mailto:alirezarastineh95@gmail.com"
-              className="sm:text-2xl"
+              className="sm:text-2xl hover:rounded-full hover:text-[#F7AB0A]/60 transition-all duration-300 ease-out"
             >
               alirezarastineh95@gmail.com
             </a>
