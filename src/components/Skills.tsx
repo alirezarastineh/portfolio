@@ -21,7 +21,7 @@ export default function Skills({}: Props) {
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm xl:top-28 2xl:top-56 text-center">
         Hovern Sie über eine Fähigkeit, um die aktuelle Kenntnisstufe zu sehen
       </h3>
-      <div className="xl:mt-48 grid grid-cols-4 gap-5 top-20 sm:top-14 relative">
+      <div className="xl:mt-48 grid grid-cols-4 2xl:grid-cols-5 gap-5 top-20 sm:top-14 relative">
         <Skill percentage={70} imageUrl="https://i.imgur.com/b0f0L7E.png" />
         <Skill percentage={65} imageUrl="https://i.imgur.com/lmNHoXw.png" />
         <Skill percentage={50} imageUrl="https://i.imgur.com/UZMww1q.png" />

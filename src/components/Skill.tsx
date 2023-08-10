@@ -22,7 +22,7 @@ export default function Skill({ directionLeft, percentage, imageUrl }: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-full border border-gray-500/50 relative w-16 h-16 md:w-20 md:h-20 xl:w-20 xl:h-20 filter transition duration-300 ease-in-out overflow-hidden">
+        <div className="rounded-full border border-gray-500/50 relative w-16 h-16 md:w-20 md:h-20 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 filter transition duration-300 ease-in-out overflow-hidden">
           <Image
             priority
             src={imageUrl}
@@ -36,7 +36,7 @@ export default function Skill({ directionLeft, percentage, imageUrl }: Props) {
           />
         </div>
       </motion.div>
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white/80 h-16 w-16 md:w-20 md:h-20 xl:w-20 xl:h-20 rounded-full z-0">
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white/80 h-16 w-16 md:w-20 md:h-20 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
           <p className="text-xl md:text-2xl font-bold text-black opacity-100">
             {percentage}%
