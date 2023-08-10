@@ -64,7 +64,7 @@ export default function ContactMe({}: Props) {
       );
   };
   return (
-    <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center z-0 overflow-hidden">
+    <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-2 sm:px-10 justify-center mx-auto items-center z-0 overflow-hidden">
       <ToastContainer />
       <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
         Kontakt
