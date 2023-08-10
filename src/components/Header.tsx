@@ -49,6 +49,10 @@ export default function Header({}: Props) {
             fgColor="#F7AB0A"
             bgColor="transparent"
             style={{ opacity: 0.7 }}
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("https://github.com/alirezarastineh", "_blank");
+            }}
           />
           <SocialIcon
             className="grayscale hover:grayscale-0 transition-all ease-in-out duration-300"
@@ -56,7 +60,12 @@ export default function Header({}: Props) {
             fgColor="#F7AB0A"
             bgColor="transparent"
             style={{ opacity: 0.7 }}
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("https://linkedin.com/in/alirezarastineh", "_blank");
+            }}
           />
+
           <a
             href="/Lebenslauf%202023.pdf"
             download
