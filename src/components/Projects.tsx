@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "../app/globals.css";
 import Image from "next/image";
 import { projects } from "./Project";
+import { SocialIcon } from "react-social-icons";
 
 type Props = {};
 
@@ -20,7 +21,7 @@ export default function Projects({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="flex flex-col relative h-screen text-left md:text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center z-0 overflow-hidden"
+      className="flex flex-col relative h-screen text-left md:text-left md:flex-row max-w-full px-1 sm:px-28 justify-evenly mx-auto items-center z-0 overflow-hidden"
     >
       <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
         Projekte
@@ -44,7 +45,7 @@ export default function Projects({}: Props) {
         {projects.map((project, i) => (
           <SwiperSlide key={project.id}>
             <motion.div className="mt-8 flex items-center justify-center h-screen">
-              <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 sm:space-y-7 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
+              <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 sm:space-y-3 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
                 <motion.div
                   initial={{
                     y: -250,
@@ -54,46 +55,68 @@ export default function Projects({}: Props) {
                   transition={{ duration: 1.2 }}
                   viewport={{ once: true }}
                 >
-                  <div className="relative w-56 h-28 md:w-96 md:h-48 2xl:w-[500px] 2xl:h-[250px] cursor-pointer">
-                    <Image
-                      priority
-                      src={project.imageUrl}
-                      alt={project.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
+                  <a href={project.link} target="_blank" rel="noreferrer">
+                    <div className="relative w-56 h-28 md:w-96 md:h-48 2xl:w-[500px] 2xl:h-[250px]">
+                      <Image
+                        priority
+                        src={project.imageUrl}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  </a>
                 </motion.div>
-                <div className="space-y-2 sm:space-y-5 px-0 md:px-10 max-w-6xl cursor-pointer">
-                  <h4 className="text-xl sm:text-4xl font-semibold text-center">
-                    <span className="underline decoration-[#F7AB0A]/50">
-                      Projekt {i + 1} von {projects.length}:
-                    </span>{" "}
-                    {project.title}
-                  </h4>
-                  <div className="flex space-x-2 my-2 items-center justify-center">
-                    {project.images.map((image, index) => (
-                      <div
-                        key={index}
-                        className="relative h-10 w-10 overflow-hidden"
-                      >
-                        <Image
-                          className="absolute inset-0"
-                          priority
-                          src={image}
-                          alt=""
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          style={{
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
-                    ))}
+                <div className="space-y-2 sm:space-y-5 px-0 md:px-10 max-w-6xl">
+                  <div className="space-y-0">
+                    <h4 className="text-xl sm:text-4xl font-semibold text-center">
+                      <span className="underline decoration-[#F7AB0A]/50">
+                        Projekt {i + 1} von {projects.length}:
+                      </span>{" "}
+                      {project.title}
+                    </h4>
+                    <p className="uppercase py-1 sm:py-3 text-gray-300 text-center">
+                      {project.startDate}
+                      {project.endDate ? ` - ${project.endDate}` : ""}
+                    </p>
+
+                    <div className="flex space-x-2 items-center justify-center">
+                      {project.images.map((image, index) => (
+                        <div
+                          key={index}
+                          className="relative h-10 w-10 overflow-hidden"
+                        >
+                          <Image
+                            className="absolute inset-0"
+                            priority
+                            src={image}
+                            alt=""
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            style={{
+                              objectFit: "cover",
+                            }}
+                          />
+                        </div>
+                      ))}
+                      <SocialIcon
+                        className="grayscale hover:grayscale-0 transition-all ease-in-out duration-300"
+                        url={project.githubUrl}
+                        fgColor="#F7AB0A"
+                        bgColor="transparent"
+                        style={{ opacity: 0.7, width: "65px", height: "65px" }}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open(project.githubUrl, "_blank");
+                        }}
+                      />
+                    </div>
                   </div>
-                  <p className="sm:text-lg text-center md:text-left">
-                    {project.description}
-                  </p>
+                  <div className="h-14">
+                    <p className="sm:text-lg text-center md:text-left">
+                      {project.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
