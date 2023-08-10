@@ -32,7 +32,7 @@ export default function ContactMe({}: Props) {
       from_name: formData.name,
       reply_to: formData.email,
       subject: formData.subject,
-      message: formData.message,
+      message: `Subject: ${formData.subject}\n\n${formData.message}`,
     };
 
     emailjs
