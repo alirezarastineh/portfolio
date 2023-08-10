@@ -94,6 +94,7 @@ export default function Education({}: Props) {
             startDate="02.2020"
             endDate="06.2020"
             xlImageSize="xl:w-[150px]"
+            xxlImageSize="2xl:w-[190px]"
           />
         </SwiperSlide>
         <SwiperSlide>
