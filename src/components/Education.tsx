@@ -115,7 +115,7 @@ export default function Education({}: Props) {
             endDate="07.2020"
             customWidth="w-[100px]"
             xlImageSize="xl:w-[120px]"
-            xxlImageSize="2xl:w-[140px]"
+            xxlImageSize="2xl:w-[150px]"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -136,7 +136,8 @@ export default function Education({}: Props) {
             endDate="07.2017"
             xlImageSize="xl:w-[255px]"
             xxlImageSize="2xl:w-[320px]"
-            customWidth="w-[215px]"
+            customWidth="w-[200px]"
+            customHeight="h-[120px]"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -157,7 +158,7 @@ export default function Education({}: Props) {
             endDate="07.2018"
             customWidth="w-[100px]"
             xlImageSize="xl:w-[120px]"
-            xxlImageSize="2xl:w-[140px]"
+            xxlImageSize="2xl:w-[150px]"
           />
         </SwiperSlide>
       </Swiper>

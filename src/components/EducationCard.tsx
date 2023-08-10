@@ -15,6 +15,7 @@ type Props = {
   xlImageSize?: string;
   xxlImageSize?: string;
   customWidth?: string;
+  customHeight?: string;
   xlImageSizeH?: string;
   xxlImageSizeH?: string;
 };
@@ -32,6 +33,7 @@ export default function EducationCard({
   xlImageSizeH,
   xxlImageSizeH,
   customWidth,
+  customHeight,
 }: Props) {
   return (
     <div className="relative mt-0 xl:mt-0 2xl:mt-16 flex items-center justify-center">
@@ -46,10 +48,11 @@ export default function EducationCard({
           viewport={{ once: true }}
         >
           <div
-            className={`relative ${customWidth || "w-32"} 
-            h-32 ${xlImageSize || "xl:w-44"} ${
-              xlImageSizeH || "xl:h-[150px]"
-            } ${xxlImageSize || "2xl:w-44"} 
+            className={`relative ${customWidth || "w-32"} ${
+              customHeight || "h-32"
+            } ${xlImageSize || "xl:w-44"} ${xlImageSizeH || "xl:h-[150px]"} ${
+              xxlImageSize || "2xl:w-44"
+            } 
             ${
               xxlImageSizeH || "2xl:h-[190px]"
             } object-cover object-center cursor-pointer overflow-hidden`}
