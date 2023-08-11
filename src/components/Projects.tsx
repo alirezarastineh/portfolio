@@ -79,7 +79,6 @@ export default function Projects({}: Props) {
                       {project.startDate}
                       {project.endDate ? ` - ${project.endDate}` : ""}
                     </p>
-
                     <div className="flex space-x-2 items-center justify-center">
                       {project.images.map((image, index) => (
                         <div
