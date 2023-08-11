@@ -72,7 +72,9 @@ export default function ContactMe({}: Props) {
       <div className="flex flex-col space-y-3 sm:space-y-5 relative top-5">
         <h4 className="text-lg sm:text-4xl font-semibold text-center">
           Habe ich genau das, was Sie brauchen?{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk!</span>
+          <span className="decoration-[#F7AB0A]/50 underline">
+            Let&apos;s Talk!
+          </span>
         </h4>
         <div className="space-y-2 sm:space-y-5">
           <div className="flex items-center sm:space-x-5 justify-center">
