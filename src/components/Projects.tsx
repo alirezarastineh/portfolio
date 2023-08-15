@@ -27,7 +27,7 @@ export default function Projects({}: Props) {
       <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
         Projekte
       </h3>
-      <h4 className="absolute text-center justify-center top-24 md:top-28 lg:top-20 xl:top-28 uppercase tracking-[5px] text-xs sm:text-base text-gray-500 z-10">
+      <h4 className="absolute text-center justify-center top-36 lg:top-20 xl:top-28 2xl:top-48 uppercase tracking-[5px] text-xs sm:text-base text-gray-500 z-10">
         Wischen Sie, um alle Projekte zu sehen
       </h4>
       <Swiper
