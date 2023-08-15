@@ -3,10 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Mousewheel } from "swiper/modules";
+import { Pagination, Mousewheel, Keyboard, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css/mousewheel";
+import "swiper/css/keyboard";
 import "../app/globals.css";
 import EducationCard from "./EducationCard";
 
@@ -38,7 +40,9 @@ export default function Education({}: Props) {
           forceToAxis: true,
           eventsTarget: ".mySwiper",
         }}
-        modules={[Pagination, Mousewheel]}
+        navigation={true}
+        keyboard={{ enabled: true }}
+        modules={[Pagination, Mousewheel, Keyboard, Navigation]}
         className="mt-8 mySwiper w-full flex items-center justify-center overflow-x-scroll p-30 no-mousewheel"
       >
         <SwiperSlide>
