@@ -3,11 +3,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Navigation, Keyboard } from "swiper/modules";
+import { Mousewheel, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/navigation";
-import "swiper/css/keyboard";
 import "../app/globals.css";
 import Image from "next/image";
 import { projects } from "./Project";
@@ -38,11 +37,9 @@ export default function Projects({}: Props) {
         mousewheel={{
           releaseOnEdges: true,
           forceToAxis: true,
-          eventsTarget: ".mySwiper",
         }}
         navigation={true}
-        keyboard={{ enabled: true }}
-        modules={[Mousewheel, Navigation, Keyboard]}
+        modules={[Mousewheel, Navigation]}
         className="mySwiper relative w-full flex overflow-x-scroll overflow-hidden snap-x snap-mandatory z-20 no-mousewheel"
       >
         {projects.map((project, i) => (
