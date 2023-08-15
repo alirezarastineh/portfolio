@@ -32,6 +32,9 @@
 
 .mySwiper .swiper-pagination-bullet {
   background-color: white !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
 }
 
 .swiper-button-next::after,
