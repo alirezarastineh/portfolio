@@ -52,8 +52,67 @@ export default function Home() {
     };
   }, []);
 
+  const easeInOutQuad = (
+    t: number,
+    b: number,
+    c: number,
+    d: number
+  ): number => {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+
+  const smoothScrollTo = (
+    element: HTMLElement,
+    target: number,
+    duration: number
+  ) => {
+    const start = element.scrollTop;
+    const change = target - start;
+    const increment = 20;
+    let currentTime = 0;
+
+    const animateScroll = () => {
+      currentTime += increment;
+      const val = easeInOutQuad(currentTime, start, change, duration);
+      element.scrollTop = val;
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        element.style.scrollSnapType = "y mandatory";
+      }
+    };
+
+    animateScroll();
+  };
+
+  const handleScrollClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const container = event.currentTarget;
+
+    if (event.clientX <= container.offsetLeft + container.clientWidth) {
+      return;
+    }
+    container.style.scrollSnapType = "none";
+
+    const containerScrollHeight = container.scrollHeight;
+    const containerClientHeight = container.clientHeight;
+    const scrollThumbHeight =
+      (containerClientHeight / containerScrollHeight) * containerClientHeight;
+    const ratio = event.clientY / containerClientHeight;
+
+    const desiredScrollPosition =
+      ratio * containerScrollHeight - scrollThumbHeight / 2;
+
+    smoothScrollTo(container, desiredScrollPosition, 500);
+  };
+
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden scrollbar-thin scrollbar-track-transparent transition-all custom-scrollbar">
+    <div
+      className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden scrollbar-thin scrollbar-track-transparent transition-all custom-scrollbar"
+      onMouseDown={handleScrollClick}
+    >
       <Header />
 
       <section ref={heroRef} id="hero" className="snap-start">
