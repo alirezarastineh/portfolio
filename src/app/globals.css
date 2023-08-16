@@ -97,7 +97,6 @@ a,
 button,
 div {
   -webkit-tap-highlight-color: transparent !important;
-  touch-action: manipulation !important;
   outline: none !important;
   outline-style: none !important;
   -moz-outline-style: none !important;
@@ -107,7 +106,6 @@ div {
 
 .no-tap {
   -webkit-tap-highlight-color: transparent !important;
-  touch-action: manipulation !important;
   outline: none !important;
   outline-style: none !important;
   -moz-outline-style: none !important;
