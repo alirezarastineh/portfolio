@@ -11,7 +11,7 @@ import "../app/globals.css";
 type Props = {};
 
 export default function Hero({}: Props) {
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: [
       "Hallo, mein Name ist Alireza Rastineh",
       "Ehemaliger-Profi-Sprinter.tsx",
