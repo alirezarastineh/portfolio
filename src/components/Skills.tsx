@@ -19,7 +19,7 @@ export default function Skills({}: Props) {
         Skills
       </h3>
       <h4 className="sm:hidden absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm sm:text-base xl:top-28 2xl:top-56 text-center">
-        Klicken Sie über eine Fähigkeit, um die aktuelle Kenntnisstufe zu sehen
+        Klicken Sie auf eine Fähigkeit, um die aktuelle Kenntnisstufe zu sehen
       </h4>
       <h4 className="hidden sm:block absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm sm:text-base xl:top-28 2xl:top-56 text-center">
         Hovern Sie über eine Fähigkeit, um die aktuelle Kenntnisstufe zu sehen
