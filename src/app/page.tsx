@@ -91,6 +91,17 @@ export default function Home() {
   const handleScrollClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const container = event.currentTarget;
 
+    const scrollRatio =
+      container.scrollTop / (container.scrollHeight - container.clientHeight);
+    const thumbHeight =
+      (container.clientHeight / container.scrollHeight) *
+      container.clientHeight;
+    const thumbTop = scrollRatio * (container.clientHeight - thumbHeight);
+
+    if (event.clientY >= thumbTop && event.clientY <= thumbTop + thumbHeight) {
+      return;
+    }
+
     if (event.clientX <= container.offsetLeft + container.clientWidth) {
       return;
     }
