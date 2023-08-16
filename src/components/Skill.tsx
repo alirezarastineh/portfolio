@@ -22,7 +22,7 @@ export default function Skill({ directionLeft, percentage, imageUrl }: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-full border border-gray-500/50 relative w-16 h-16 md:w-20 md:h-20 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 filter transition duration-300 ease-in-out overflow-hidden">
+        <div className="rounded-full border border-gray-500/50 relative w-16 h-16 md:w-20 md:h-20 xl:w-20 xl:h-20 2xl:w-24 2xl:h-24 filter transition duration-300 ease-in-out overflow-hidden no-tap">
           <Image
             priority
             src={imageUrl}
@@ -33,6 +33,7 @@ export default function Skill({ directionLeft, percentage, imageUrl }: Props) {
               objectFit: "cover",
               borderRadius: "50%",
             }}
+            onTouchStart={(e) => e.preventDefault()}
           />
         </div>
       </motion.div>
