@@ -48,7 +48,7 @@ export default function Projects({}: Props) {
               <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 sm:space-y-3 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
                 <motion.div
                   initial={{
-                    y: -250,
+                    y: -100,
                     opacity: 0,
                   }}
                   whileInView={{ opacity: 1, y: 0 }}
