@@ -44,7 +44,7 @@ export default function Skills({}: Props) {
         <Skill percentage={65} imageUrl="https://i.imgur.com/9hO5BKj.png" />
         <Skill percentage={60} imageUrl="https://i.imgur.com/X1wfpyX.png" />
         <Skill percentage={60} imageUrl="https://i.imgur.com/A15r8O4.png" />
-        <Skill percentage={45} imageUrl="https://i.imgur.com/NEVNmud.png" />
+        <Skill percentage={20} imageUrl="https://i.imgur.com/zWXFYGT.png" />
       </div>
     </motion.div>
   );
