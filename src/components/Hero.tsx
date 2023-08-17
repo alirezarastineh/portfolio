@@ -39,7 +39,7 @@ export default function Hero({}: Props) {
       <div className="relative h-32 w-32 sm:h-36 sm:w-36 overflow-hidden rounded-[50%]">
         <Image
           priority
-          src="https://i.imgur.com/bA7yhT9.jpg"
+          src="https://i.imgur.com/25djQ92.jpg"
           alt=""
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

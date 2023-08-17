@@ -32,16 +32,30 @@ export default function About({}: Props) {
         }}
       >
         <div className="top-[22px] sm:top-[80px] md:top-[90px] lg:top-[20px] xl:top-0 relative -mb-24 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full sm:w-56 sm:h-56 md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[350px] xl:h-[450px] 2xl:w-[400px] 2xl:h-[500px] overflow-hidden">
-          <Image
-            priority
-            src="https://i.imgur.com/rbmFybY.jpg"
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            style={{
-              objectFit: "cover",
-            }}
-          />
+          <div className="hidden sm:block">
+            <Image
+              priority
+              src="https://i.imgur.com/gPjis1Z.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </div>
+          <div className="block sm:hidden">
+            <Image
+              priority
+              src="https://i.imgur.com/dBY7LU4.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </div>
         </div>
       </motion.div>
       <div className="relative space-y-1 sm:space-y-5 px-0 md:px-10 top-[50px] sm:top-[50px] md:top-[90px] lg:top-[20px] xl:top-0">
