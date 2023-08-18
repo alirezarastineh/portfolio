@@ -23,6 +23,21 @@ export default function Header({}: Props) {
       contactElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+  function downloadFiles() {
+    const link1 = document.createElement("a");
+    link1.href = "/Lebenslauf%202023.pdf";
+    link1.download = "Lebenslauf 2023.pdf";
+    document.body.appendChild(link1);
+    link1.click();
+    document.body.removeChild(link1);
+
+    const link2 = document.createElement("a");
+    link2.href = "/CV%202023.pdf";
+    link2.download = "CV 2023.pdf";
+    document.body.appendChild(link2);
+    link2.click();
+    document.body.removeChild(link2);
+  }
 
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
@@ -67,15 +82,21 @@ export default function Header({}: Props) {
           />
 
           <a
-            href="/Lebenslauf%202023.pdf"
-            download
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              downloadFiles();
+            }}
             className="uppercase hidden md:inline-flex ml-3 mt-1 text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
           >
             Lebenslauf
           </a>
           <a
-            href="/Lebenslauf%202023.pdf"
-            download
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              downloadFiles();
+            }}
             className="uppercase md:hidden inline-flex ml-3 mt-1 text-2xl text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
           >
             CV
