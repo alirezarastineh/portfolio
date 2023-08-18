@@ -49,7 +49,7 @@ export const projects = [
     ],
     startDate: "06.2023",
     endDate: "07.2023",
-    link: "https://alirezababa.vercel.app/",
+    link: "https://alireza-baba.vercel.app/",
     githubUrl: "https://github.com/alirezarastineh/AlirezaBaba",
   },
   {
