@@ -35,7 +35,7 @@ export default function About({}: Props) {
           <div className="hidden sm:block">
             <Image
               priority
-              src="https://i.imgur.com/gPjis1Z.jpg"
+              src="https://i.imgur.com/3Or96X2.jpg"
               alt=""
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -47,7 +47,7 @@ export default function About({}: Props) {
           <div className="block sm:hidden">
             <Image
               priority
-              src="https://i.imgur.com/dBY7LU4.jpg"
+              src="https://i.imgur.com/C8UHksa.jpg"
               alt=""
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
