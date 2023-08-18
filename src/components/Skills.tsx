@@ -25,25 +25,25 @@ export default function Skills({}: Props) {
         Hovern Sie über eine Fähigkeit, um die aktuelle Kenntnisstufe zu sehen
       </h4>
       <div className="xl:mt-48 grid grid-cols-4 2xl:grid-cols-5 gap-5 top-20 sm:top-14 relative">
-        <Skill percentage={70} imageUrl="https://i.imgur.com/b0f0L7E.png" />
-        <Skill percentage={65} imageUrl="https://i.imgur.com/lmNHoXw.png" />
-        <Skill percentage={50} imageUrl="https://i.imgur.com/UZMww1q.png" />
-        <Skill percentage={45} imageUrl="https://i.imgur.com/IvdoND0.png" />
-        <Skill percentage={40} imageUrl="https://i.imgur.com/Jx7gRFU.png" />
-        <Skill percentage={35} imageUrl="https://i.imgur.com/Eonjo5f.png" />
-        <Skill percentage={35} imageUrl="https://i.imgur.com/AelwhLw.png" />
-        <Skill percentage={60} imageUrl="https://i.imgur.com/taH2fNN.png" />
-        <Skill percentage={50} imageUrl="https://i.imgur.com/6bxEQ9s.png" />
-        <Skill percentage={35} imageUrl="https://i.imgur.com/F4QkDAV.png" />
-        <Skill percentage={35} imageUrl="https://i.imgur.com/E2gonVz.png" />
-        <Skill percentage={40} imageUrl="https://i.imgur.com/LqZKvdX.png" />
-        <Skill percentage={30} imageUrl="https://i.imgur.com/7Cq9Dsl.png" />
-        <Skill percentage={50} imageUrl="https://i.imgur.com/EMcIArs.png" />
+        <Skill percentage={55} imageUrl="https://i.imgur.com/b0f0L7E.png" />
+        <Skill percentage={45} imageUrl="https://i.imgur.com/lmNHoXw.png" />
+        <Skill percentage={40} imageUrl="https://i.imgur.com/UZMww1q.png" />
+        <Skill percentage={35} imageUrl="https://i.imgur.com/IvdoND0.png" />
+        <Skill percentage={30} imageUrl="https://i.imgur.com/Jx7gRFU.png" />
+        <Skill percentage={25} imageUrl="https://i.imgur.com/Eonjo5f.png" />
+        <Skill percentage={30} imageUrl="https://i.imgur.com/AelwhLw.png" />
+        <Skill percentage={40} imageUrl="https://i.imgur.com/taH2fNN.png" />
+        <Skill percentage={35} imageUrl="https://i.imgur.com/6bxEQ9s.png" />
+        <Skill percentage={25} imageUrl="https://i.imgur.com/F4QkDAV.png" />
+        <Skill percentage={25} imageUrl="https://i.imgur.com/E2gonVz.png" />
+        <Skill percentage={25} imageUrl="https://i.imgur.com/LqZKvdX.png" />
+        <Skill percentage={20} imageUrl="https://i.imgur.com/7Cq9Dsl.png" />
+        <Skill percentage={30} imageUrl="https://i.imgur.com/EMcIArs.png" />
         <Skill percentage={40} imageUrl="https://i.imgur.com/UjFAGog.png" />
-        <Skill percentage={40} imageUrl="https://i.imgur.com/pNla9uu.png" />
-        <Skill percentage={65} imageUrl="https://i.imgur.com/9hO5BKj.png" />
-        <Skill percentage={60} imageUrl="https://i.imgur.com/X1wfpyX.png" />
-        <Skill percentage={60} imageUrl="https://i.imgur.com/A15r8O4.png" />
+        <Skill percentage={30} imageUrl="https://i.imgur.com/pNla9uu.png" />
+        <Skill percentage={50} imageUrl="https://i.imgur.com/9hO5BKj.png" />
+        <Skill percentage={20} imageUrl="https://i.imgur.com/X1wfpyX.png" />
+        <Skill percentage={30} imageUrl="https://i.imgur.com/A15r8O4.png" />
         <Skill percentage={20} imageUrl="https://i.imgur.com/zWXFYGT.png" />
       </div>
     </motion.div>
