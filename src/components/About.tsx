@@ -60,9 +60,9 @@ export default function About({}: Props) {
       </motion.div>
       <div className="relative space-y-1 sm:space-y-5 px-0 md:px-10 top-[50px] sm:top-[50px] md:top-[90px] lg:top-[20px] xl:top-0">
         <h4 className="md:text-2xl xl:text-3xl 2xl:text-4xl text-xl font-semibold">
-          Hier ist ein{" "}
-          <span className="underline decoration-[#F7AB0A]/50">kleiner</span>{" "}
-          Hintergrund
+          Mein Weg bis zum{" "}
+          <span className="underline decoration-[#F7AB0A]/50">heutigen</span>{" "}
+          Tag
         </h4>
         <p className="text-xs sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl">
           Ein Junior Frontend-Entwickler mit einem B. Sc. & M. Sc. Abschluss in
