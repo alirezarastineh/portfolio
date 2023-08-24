@@ -52,7 +52,7 @@ export default function Education({}: Props) {
             imageUrl="https://i.imgur.com/QIe70hH.png"
             summaryPoints={[
               "Vollzeit",
-              "6-Monate-Programm mit 840 Stunden",
+              "5-Monate-Programm mit 840 Stunden",
               "Anwendung von Agile/SCRUM",
               "Betonung der Gruppenarbeit",
               "Einschluss von Code Reviews, Spikes",
