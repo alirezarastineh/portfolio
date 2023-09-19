@@ -65,20 +65,18 @@ export default function About({}: Props) {
           Tag
         </h4>
         <p className="text-xs sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl">
-          Ein Junior Frontend-Entwickler mit einem B. Sc. & M. Sc. Abschluss in
-          Computer Engineering - Software von der Islamic Azad University
-          Sciences and Researches Branch in Teheran und Studienerfahrung in
-          Medieninformatik an der Hochschule für Technik und Wirtschaft Berlin.
-          Des Weiteren habe ich erfolgreich an einem Full-Stack Entwicklung
-          Weiterbildung an der Code Academy Berlin teilgenommen. Mein
-          Schwerpunkt liegt hauptsächlich auf Frontend-Entwicklung, aber ich
-          verfüge auch über solide Kenntnisse in Backend-Entwicklung, um
-          effiziente und umfassende Lösungen zu ermöglichen. Ich halte mich an
-          Protokolle und sorge für pünktliche Projektfertigstellung. Ich
-          beherrsche TypeScript, React, Tailwind CSS, Node.js, Express JS,
-          MongoDB und andere Technologien.Früher war ich erfolgreicher Sprinter
-          und strebe danach, ein Senior Developer zu werden und letztendlich ein
-          Blockchain-Unternehmen zu leiten.
+          Ein Junior Frontend-Entwickler mit einem B. Sc. Abschluss in Computer
+          Engineering - Software und Studienerfahrung in Medieninformatik an der
+          Hochschule für Technik und Wirtschaft Berlin. Des Weiteren habe ich
+          erfolgreich an einem Full-Stack Entwicklung Weiterbildung an der Code
+          Academy Berlin teilgenommen. Mein Schwerpunkt liegt hauptsächlich auf
+          Frontend-Entwicklung, aber ich verfüge auch über solide Kenntnisse in
+          Backend-Entwicklung, um effiziente und umfassende Lösungen zu
+          ermöglichen. Ich halte mich an Protokolle und sorge für pünktliche
+          Projektfertigstellung. Ich beherrsche TypeScript, React, Tailwind CSS,
+          Node.js, Express JS, MongoDB und andere Technologien.Früher war ich
+          erfolgreicher Sprinter und strebe danach, ein Senior Developer zu
+          werden und letztendlich ein Blockchain-Unternehmen zu leiten.
         </p>
       </div>
     </motion.div>
