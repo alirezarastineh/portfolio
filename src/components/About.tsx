@@ -65,12 +65,13 @@ export default function About({}: Props) {
           Tag
         </h4>
         <p className="text-xs sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl">
-          Ein Junior Frontend-Entwickler mit einem B. Sc. Abschluss in Computer
-          Engineering - Software und Studienerfahrung in Medieninformatik an der
-          Hochschule für Technik und Wirtschaft Berlin. Des Weiteren habe ich
-          erfolgreich an einem Full-Stack Entwicklung Weiterbildung an der Code
-          Academy Berlin teilgenommen. Mein Schwerpunkt liegt hauptsächlich auf
-          Frontend-Entwicklung, aber ich verfüge auch über solide Kenntnisse in
+          Ein Frontend-Entwickler mit einem B. Sc. Abschluss in Software
+          Engineering und Studienerfahrung in Medieninformatik. Des Weiteren habe 
+          ich mein Fachwissen in der Full-Stack-Entwicklung durch ein 
+          Full-Stack Entwicklung Bootcamp erweitert, welches mir 
+          praxisnahe Erfahrungen in einem dynamischen Arbeitsumfeld geboten hat. 
+          Mein Schwerpunkt liegt hauptsächlich auf Frontend-Entwicklung, 
+          aber ich verfüge auch über solide Kenntnisse in
           Backend-Entwicklung, um effiziente und umfassende Lösungen zu
           ermöglichen. Ich halte mich an Protokolle und sorge für pünktliche
           Projektfertigstellung. Ich beherrsche TypeScript, React, Tailwind CSS,
