@@ -25,15 +25,15 @@ export default function Header({}: Props) {
   };
   function downloadFiles() {
     const link1 = document.createElement("a");
-    link1.href = "/Lebenslauf%202023.pdf";
-    link1.download = "Lebenslauf 2023.pdf";
+    link1.href = "/Lebenslauf%20-%20Alireza%20Rastineh.pdf";
+    link1.download = "Lebenslauf - Alireza Rastineh.pdf";
     document.body.appendChild(link1);
     link1.click();
     document.body.removeChild(link1);
 
     const link2 = document.createElement("a");
-    link2.href = "/CV%202023.pdf";
-    link2.download = "CV 2023.pdf";
+    link2.href = "/CV%20-%20Alireza%20Rastineh.pdf";
+    link2.download = "CV - Alireza Rastineh.pdf";
     document.body.appendChild(link2);
     link2.click();
     document.body.removeChild(link2);
