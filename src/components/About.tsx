@@ -65,19 +65,20 @@ export default function About({}: Props) {
           Tag
         </h4>
         <p className="text-xs sm:text-sm lg:text-base xl:text-xl 2xl:text-2xl">
-          Ein Frontend-Entwickler mit einem B. Sc. Abschluss in Software
-          Engineering und Studienerfahrung in Medieninformatik. Des Weiteren
-          habe ich mein Fachwissen in der Full-Stack-Entwicklung durch ein
-          Full-Stack Entwicklung Bootcamp erweitert, welches mir praxisnahe
-          Erfahrungen in einem dynamischen Arbeitsumfeld geboten hat. Mein
-          Schwerpunkt liegt hauptsächlich auf Frontend-Entwicklung, allerdings
-          verfüge ich auch über solide Kenntnisse in Backend-Entwicklung, um
-          effiziente und umfassende Lösungen zu ermöglichen. Ich halte mich an
-          Protokolle und sorge für pünktliche Projektfertigstellung. Ich
-          beherrsche TypeScript, React, Tailwind CSS, Node.js, Express JS,
-          MongoDB und andere Technologien. Früher war ich erfolgreicher Sprinter
-          und strebe danach, ein Senior Developer zu werden und letztendlich ein
-          Blockchain-Unternehmen zu leiten.
+          Haben Sie schon darüber nachgedacht, wie ein Frontend-Entwickler mit
+          einem B. Sc. in Software Engineering und Erfahrung in Medieninformatik
+          Ihr Team bereichern könnte? Durch ein Full-Stack Entwicklung Bootcamp
+          wurde mein Fachwissen erweitert, um in dynamischen Arbeitsumfeldern
+          praxisnahe Erfahrungen zu bieten. Worauf legen Sie besonders Wert bei
+          der Entwicklung effizienter und umfassender Lösungen? Mein Schwerpunkt
+          liegt auf Frontend-Entwicklung, ergänzt durch solide Kenntnisse in
+          Backend-Entwicklung. Es wird Sie interessieren, dass ich mich stets an
+          Protokolle halte und für pünktliche Projektfertigstellung sorge. Als
+          früherer Kurzsprinter strebe ich danach, als Senior Entwickler zu
+          wachsen und ein Blockchain-Unternehmen zu leiten. Stellen Sie sich
+          vor, wie meine Ambitionen und Fähigkeiten Ihrem Team zu mehr Erfolg
+          verhelfen könnten. Ist das nicht genau die Art von Engagement und
+          Expertise, die Sie suchen?
         </p>
       </div>
     </motion.div>
