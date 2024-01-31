@@ -1,5 +1,28 @@
 export const projects = [
   {
+    id: "project7",
+    title: "LMS",
+    description:
+      "LMS Platform mit Authentifizierung, Benachrichtigung, Bestellungen, Analytik, Kurse, Layout",
+    imageUrl: "https://i.imgur.com/NYiYPgJ.png",
+    images: [
+      "https://i.imgur.com/IvdoND0.png",
+      "https://i.imgur.com/AelwhLw.png",
+      "https://i.imgur.com/taH2fNN.png",
+      "https://i.imgur.com/F4QkDAV.png",
+      "https://i.imgur.com/E2gonVz.png",
+      "https://i.imgur.com/LqZKvdX.png",
+      "https://i.imgur.com/bPdbrAc.png",
+      "https://i.imgur.com/n29hpWR.png",
+      "https://i.imgur.com/RhImJ3v.png",
+      "https://i.imgur.com/LY9fjsQ.png",
+    ],
+    startDate: "09.2023",
+    endDate: "aktuell",
+    link: "https://github.com/alirezarastineh/LMS",
+    githubUrl: "https://github.com/alirezarastineh/LMS",
+  },
+  {
     id: "project1",
     title: "Portfolio Webseite",
     description:
