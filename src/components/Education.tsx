@@ -57,7 +57,7 @@ export default function Education({}: Props) {
               "Verantwortlich für das ganze Project",
               "Frontend: Typescript, Next.js, Redux, ...",
               "Backend: Python, Django, PostgreSQL, ...",
-              "...",
+              "....",
             ]}
             startDate="03.2024"
           />
