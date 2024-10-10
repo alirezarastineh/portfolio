@@ -47,6 +47,23 @@ export default function Education({}: Props) {
       >
         <SwiperSlide>
           <EducationCard
+            position="Full-Stack-Softwareentwicker"
+            company="Datenbankgesellschaft mbH"
+            imageUrl="https://i.imgur.com/3OGyc18.png"
+            summaryPoints={[
+              "Vollzeit",
+              "Erstellung des Kundenportals",
+              "Agile Framework",
+              "Verantwortlich für das ganze Project",
+              "Frontend: Typescript, Next.js, Redux, ...",
+              "Backend: Python, Django, PostgreSQL, ...",
+              "...",
+            ]}
+            startDate="03.2024"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <EducationCard
             position="Full-Stack-Entwicklung Bootcamp"
             company="Code Academy Berlin Education GmbH"
             imageUrl="https://i.imgur.com/QIe70hH.png"
@@ -54,7 +71,7 @@ export default function Education({}: Props) {
               "Vollzeit",
               "5-Monate-Programm mit 840 Stunden",
               "Anwendung von Agile/SCRUM",
-              "Betonung der Gruppenarbeit",
+              "Gruppenarbeit",
               "Einschluss von Code Reviews, Spikes",
               "Frontend: Typescript, React, Next, ...",
               "Backend: Node, Express, MongoDB, ...",
