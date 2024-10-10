@@ -49,7 +49,7 @@ export default function Education({}: Props) {
           <EducationCard
             position="Full-Stack-Softwareentwicker"
             company="Datenbankgesellschaft mbH"
-            imageUrl="https://i.imgur.com/3OGyc18.png"
+            imageUrl="https://i.imgur.com/fHN7cAG.png"
             summaryPoints={[
               "Vollzeit",
               "Erstellung des Kundenportals",
