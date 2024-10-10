@@ -60,6 +60,7 @@ export default function Education({}: Props) {
               "....",
             ]}
             startDate="03.2024"
+            endDate="aktuell"
           />
         </SwiperSlide>
         <SwiperSlide>
