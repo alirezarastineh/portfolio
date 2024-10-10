@@ -101,7 +101,7 @@ export default function Education({}: Props) {
             xxlImageSize="2xl:w-[190px]"
           />
         </SwiperSlide>
-        {/* <SwiperSlide>
+        <SwiperSlide>
           <EducationCard
             position="M. Sc. Software Engineering"
             company="
@@ -121,7 +121,7 @@ export default function Education({}: Props) {
             xlImageSize="xl:w-[120px]"
             xxlImageSize="2xl:w-[150px]"
           />
-        </SwiperSlide> */}
+        </SwiperSlide>
         <SwiperSlide>
           <EducationCard
             position="Studienkolleg"
