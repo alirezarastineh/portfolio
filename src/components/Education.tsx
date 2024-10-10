@@ -45,7 +45,7 @@ export default function Education({}: Props) {
         modules={[Pagination, Mousewheel, Keyboard, Navigation]}
         className="mt-8 mySwiper w-full flex items-center justify-center overflow-x-scroll p-30 no-mousewheel"
       >
-        <SwiperSlide>
+{/*         <SwiperSlide>
           <EducationCard
             position="Full-Stack-Softwareentwicker"
             company="Datenbankgesellschaft mbH"
@@ -61,7 +61,7 @@ export default function Education({}: Props) {
             ]}
             startDate="03.2024"
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <EducationCard
             position="Full-Stack-Entwicklung Bootcamp"
