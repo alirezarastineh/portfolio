@@ -38,7 +38,7 @@ export const projects = [
     ],
     startDate: "08.2024",
     endDate: "aktuell",
-    link: "https://github.com/alirezarastineh/PERSiBER-Event-Management",
+    link: "https://persiber.vercel.app/",
     githubUrl: "https://github.com/alirezarastineh/PERSiBER-Event-Management",
   },
   {
