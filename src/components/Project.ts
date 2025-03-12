@@ -12,6 +12,7 @@ export const projects = [
       "https://i.imgur.com/ga59OwL.png",
       "https://i.imgur.com/bPdbrAc.png",
       "https://i.imgur.com/xV091Ew.png",
+      "https://i.imgur.com/KaDx0On.png",
       "https://i.imgur.com/gWfwVnb.png",
       "https://i.imgur.com/iKVvFVh.png",
     ],
