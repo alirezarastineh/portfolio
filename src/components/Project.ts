@@ -4,7 +4,7 @@ export const projects = [
     title: "Kundenportal",
     description:
       "Kundenportal mit Authentifizierung, Lizenzen-Verwaltung, Support, Admin Dashboard, ...",
-    imageUrl: "https://i.imgur.com/a/SflgsvW.png",
+    imageUrl: "https://i.imgur.com/OrvfyTU.png",
     images: [
       "https://i.imgur.com/IvdoND0.png",
       "https://i.imgur.com/AelwhLw.png",
