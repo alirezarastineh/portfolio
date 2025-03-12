@@ -1,5 +1,45 @@
 export const projects = [
   {
+    id: "project9",
+    title: "Kundenportal",
+    description:
+      "Kundenportal mit Authentifizierung, Lizenzen-Verwaltung, Support, Admin Dashboard, ...",
+    imageUrl: "https://imgur.com/a/SflgsvW",
+    images: [
+      "https://i.imgur.com/IvdoND0.png",
+      "https://i.imgur.com/AelwhLw.png",
+      "https://i.imgur.com/taH2fNN.png",
+      "https://i.imgur.com/bPdbrAc.png",
+      "https://imgur.com/xV091Ew",
+      "https://imgur.com/gWfwVnb",
+      "https://imgur.com/iKVvFVh",
+    ],
+    startDate: "03.2024",
+    endDate: "aktuell",
+    link: "https://github.com/alirezarastineh",
+    githubUrl: "https://github.com/alirezarastineh",
+  },
+  {
+    id: "project8",
+    title: "Event Managment",
+    description:
+      "Event Managment Platform mit Authentifizierung, Admin Dashboard for the entrance of Events",
+    imageUrl: "https://imgur.com/ES31FFM",
+    images: [
+      "https://i.imgur.com/IvdoND0.png",
+      "https://i.imgur.com/AelwhLw.png",
+      "https://i.imgur.com/taH2fNN.png",
+      "https://imgur.com/YQFfKJn",
+      "https://i.imgur.com/E2gonVz.png",
+      "https://i.imgur.com/LqZKvdX.png",
+      "https://i.imgur.com/bPdbrAc.png",
+    ],
+    startDate: "08.2024",
+    endDate: "aktuell",
+    link: "https://github.com/alirezarastineh/PERSiBER-Event-Management",
+    githubUrl: "https://github.com/alirezarastineh/PERSiBER-Event-Management",
+  },
+  {
     id: "project7",
     title: "LMS",
     description:
@@ -18,7 +58,7 @@ export const projects = [
       "https://i.imgur.com/LY9fjsQ.png",
     ],
     startDate: "09.2023",
-    endDate: "aktuell",
+    endDate: "02.2024",
     link: "https://github.com/alirezarastineh/LMS",
     githubUrl: "https://github.com/alirezarastineh/LMS",
   },
