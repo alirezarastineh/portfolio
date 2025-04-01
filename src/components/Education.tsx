@@ -106,7 +106,7 @@ export default function Education({}: Props) {
             customWidth="w-[215px]"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        {/*<SwiperSlide>
           <EducationCard
             position="Software Development with Java"
             company="
@@ -140,6 +140,7 @@ export default function Education({}: Props) {
             xxlImageSize="2xl:w-[150px]"
           />
         </SwiperSlide>
+        
         <SwiperSlide>
           <EducationCard
             position="Studienkolleg"
@@ -161,7 +162,7 @@ export default function Education({}: Props) {
             customWidth="w-[200px]"
             customHeight="h-[120px]"
           />
-        </SwiperSlide>
+        </SwiperSlide>*/}
         <SwiperSlide>
           <EducationCard
             position="B. Sc. Software Engineering"
