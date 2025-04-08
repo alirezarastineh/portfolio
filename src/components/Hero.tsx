@@ -50,7 +50,7 @@ export default function Hero({}: Props) {
       </div>
       <div className="z-20">
         <h2 className="flex justify-center text-sm sm:text-base uppercase text-white pb-2 tracking-[10px] sm:tracking-[15px]">
-          Frontend Entwickler
+          Software Engineer
         </h2>
         <div className="h-32">
           {" "}
