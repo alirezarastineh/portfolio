@@ -1,13 +1,10 @@
 "use client";
 
-
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
 
-type Props = {};
-
-export default function ArrowUpCircle({}: Props) {
+const ArrowUpCircle = React.memo(function ArrowUpCircle() {
   return (
     <motion.div
       initial={{
@@ -32,4 +29,6 @@ export default function ArrowUpCircle({}: Props) {
       <ArrowUpCircleIcon className="text-[#F7AB0A]/70 h-10 w-10 grayscale hover:grayscale-0 animate-pulse overflow-hidden transition-all ease-in-out duration-300" />
     </motion.div>
   );
-}
+});
+
+export default ArrowUpCircle;

@@ -4,8 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
-type Props = {};
-export default function About({}: Props) {
+const About = React.memo(function About() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -14,7 +13,7 @@ export default function About({}: Props) {
       viewport={{ once: true }}
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-3 sm:px-10 justify-evenly mx-auto items-center overflow-hidden"
     >
-      <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
+      <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[8px] sm:tracking-[12px] md:tracking-[16px] lg:tracking-[20px] text-gray-500 text-lg sm:text-xl md:text-2xl z-10 text-center w-full px-4">
         Über Mich
       </h3>
       <motion.div
@@ -31,12 +30,12 @@ export default function About({}: Props) {
           duration: 1.2,
         }}
       >
-        <div className="top-[22px] sm:top-[80px] md:top-[90px] lg:top-[20px] xl:top-0 relative -mb-24 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full sm:w-56 sm:h-56 md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[350px] xl:h-[450px] 2xl:w-[400px] 2xl:h-[500px] overflow-hidden">
-          <div className="hidden sm:block">
+        <div className="top-[22px] sm:top-[80px] md:top-[90px] lg:top-[20px] xl:top-0 relative -mb-24 md:mb-0 shrink-0 w-36 h-36 rounded-full sm:w-56 sm:h-56 md:rounded-lg md:w-[350px] md:h-[450px] xl:w-[350px] xl:h-[450px] 2xl:w-[400px] 2xl:h-[500px] overflow-hidden">
+          <div className="hidden sm:block relative w-full h-full">
             <Image
               priority
               src="https://i.imgur.com/3Or96X2.jpg"
-              alt=""
+              alt="Alireza Rastineh - Professional portrait in formal attire"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{
@@ -44,11 +43,11 @@ export default function About({}: Props) {
               }}
             />
           </div>
-          <div className="block sm:hidden">
+          <div className="block sm:hidden relative w-full h-full">
             <Image
               priority
               src="https://i.imgur.com/C8UHksa.jpg"
-              alt=""
+              alt="Alireza Rastineh - Professional portrait for mobile view"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{
@@ -83,4 +82,6 @@ export default function About({}: Props) {
       </div>
     </motion.div>
   );
-}
+});
+
+export default About;

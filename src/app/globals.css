@@ -1,19 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer components {
-  .heroButton {
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer utilities {
+  .hero-button {
     @apply px-2 sm:px-6 py-2 border rounded-full uppercase text-xs sm:text-sm tracking-widest text-white transition-all ease-in-out duration-300;
     border-color: #24242400;
-
-    &:hover {
-      @apply text-[#f7ac0ab9];
-      border-color: #f7ac0ab9;
-    }
   }
-  .contactInput {
-    @apply outline-none bg-slate-400/10 text-sm sm:text-base rounded-sm border-b px-3 sm:px-6 py-2 sm:py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
+
+  .hero-button:hover {
+    @apply text-[#f7ac0ab9];
+    border-color: #f7ac0ab9;
+  }
+
+  .contact-input {
+    @apply outline-hidden bg-slate-400/10 text-sm sm:text-base rounded-xs border-b px-3 sm:px-6 py-2 sm:py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
   }
 }
 
@@ -40,10 +57,6 @@
 .swiper-button-next::after,
 .swiper-button-prev::after {
   color: white !important;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
   transition: all 0.3s ease-in-out;
 }
 

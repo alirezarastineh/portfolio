@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  MouseEvent,
+  RefObject,
+} from "react";
 import About from "@/components/About";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -11,16 +17,17 @@ import ArrowUpCircle from "@/components/ArrowUpCircle";
 import "../app/globals.css";
 import { AnimatePresence } from "framer-motion";
 import Projects from "@/components/Projects";
+import { ANIMATION_DURATIONS, CSS_SELECTORS } from "../constants";
 
 export default function Home() {
-  const heroRef: React.RefObject<HTMLElement> = useRef(null);
-  const aboutRef: React.RefObject<HTMLElement> = useRef(null);
-  const educationRef: React.RefObject<HTMLElement> = useRef(null);
-  const skillsRef: React.RefObject<HTMLElement> = useRef(null);
-  const projectsRef: React.RefObject<HTMLElement> = useRef(null);
-  const contactRef: React.RefObject<HTMLElement> = useRef(null);
+  const heroRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement>(null);
+  const educationRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
 
-  const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
+  const scrollToSection = (ref: RefObject<HTMLElement | null>): void => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -39,7 +46,7 @@ export default function Home() {
       }
     };
 
-    const scrollingContainer = document.querySelector(".overflow-y-scroll");
+    const scrollingContainer = document.querySelector(CSS_SELECTORS.SCROLL_CONTAINER);
 
     if (scrollingContainer) {
       scrollingContainer.addEventListener("scroll", handleScroll);
@@ -68,10 +75,10 @@ export default function Home() {
     element: HTMLElement,
     target: number,
     duration: number
-  ) => {
+  ): void => {
     const start = element.scrollTop;
     const change = target - start;
-    const increment = 20;
+    const increment = ANIMATION_DURATIONS.SCROLL_INCREMENT;
     let currentTime = 0;
 
     const animateScroll = () => {
@@ -88,8 +95,9 @@ export default function Home() {
     animateScroll();
   };
 
-  const handleScrollClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const container = event.currentTarget;
+  const handleScrollClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    const container = document.querySelector(CSS_SELECTORS.SCROLL_CONTAINER) as HTMLElement;
+    if (!container) return;
 
     const scrollRatio =
       container.scrollTop / (container.scrollHeight - container.clientHeight);
@@ -116,14 +124,24 @@ export default function Home() {
     const desiredScrollPosition =
       ratio * containerScrollHeight - scrollThumbHeight / 2;
 
-    smoothScrollTo(container, desiredScrollPosition, 500);
+    smoothScrollTo(container, desiredScrollPosition, ANIMATION_DURATIONS.SMOOTH_SCROLL);
   };
 
   return (
-    <div
-      className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden scrollbar-thin scrollbar-track-transparent transition-all custom-scrollbar"
-      onMouseDown={handleScrollClick}
-    >
+    <div className="relative h-screen">
+      <button
+        className="absolute inset-0 bg-transparent border-none p-0 cursor-default"
+        onMouseDown={handleScrollClick}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleScrollClick(e as unknown as MouseEvent<HTMLButtonElement>);
+          }
+        }}
+        aria-label="Custom scrollbar control"
+        tabIndex={-1}
+      />
+      <main className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden scrollbar-thin scrollbar-track-transparent transition-all custom-scrollbar w-full text-left relative">
       <Header />
 
       <section ref={heroRef} id="hero" className="snap-start">
@@ -153,15 +171,17 @@ export default function Home() {
       <AnimatePresence>
         {showArrow && (
           <div className="fixed bottom-5 w-full flex justify-center items-center z-10">
-            <div
+            <button
               onClick={() => scrollToSection(heroRef)}
-              className="cursor-pointer"
+              className="cursor-pointer bg-transparent border-none p-0"
+              aria-label="Scroll to top"
             >
               <ArrowUpCircle />
-            </div>
+            </button>
           </div>
         )}
       </AnimatePresence>
+      </main>
     </div>
   );
 }

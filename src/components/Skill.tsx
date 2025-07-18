@@ -4,13 +4,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-type Props = {
+type SkillProps = Readonly<{
   directionLeft?: boolean;
   percentage: number;
   imageUrl: string;
-};
+  alt: string;
+}>;
 
-export default function Skill({ directionLeft, percentage, imageUrl }: Props) {
+const Skill = React.memo(function Skill({
+  directionLeft,
+  percentage,
+  imageUrl,
+  alt,
+}: SkillProps) {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.div
@@ -26,7 +32,7 @@ export default function Skill({ directionLeft, percentage, imageUrl }: Props) {
           <Image
             priority
             src={imageUrl}
-            alt=""
+            alt={alt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{
@@ -46,4 +52,6 @@ export default function Skill({ directionLeft, percentage, imageUrl }: Props) {
       </div>
     </div>
   );
-}
+});
+
+export default Skill;

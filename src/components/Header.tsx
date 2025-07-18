@@ -4,10 +4,9 @@ import React, { useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import "../app/globals.css";
+import { PERSONAL_INFO, FILE_PATHS } from "../constants";
 
-type Props = {};
-
-export default function Header({}: Props) {
+const Header = React.memo(function Header() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -16,23 +15,23 @@ export default function Header({}: Props) {
 
   const handleNavigation = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
+  ): void => {
     e.preventDefault();
     const contactElement = document.querySelector("#contact");
     if (contactElement) {
       contactElement.scrollIntoView({ behavior: "smooth" });
     }
   };
-  function downloadFiles() {
+  function downloadFiles(): void {
     const link1 = document.createElement("a");
-    link1.href = "/Lebenslauf%20-%20Alireza%20Rastineh.pdf";
+    link1.href = FILE_PATHS.CV_GERMAN;
     link1.download = "Lebenslauf - Alireza Rastineh.pdf";
     document.body.appendChild(link1);
     link1.click();
     document.body.removeChild(link1);
 
     const link2 = document.createElement("a");
-    link2.href = "/CV%20-%20Alireza%20Rastineh.pdf";
+    link2.href = FILE_PATHS.CV_ENGLISH;
     link2.download = "CV - Alireza Rastineh.pdf";
     document.body.appendChild(link2);
     link2.click();
@@ -60,47 +59,43 @@ export default function Header({}: Props) {
         >
           <SocialIcon
             className="grayscale hover:grayscale-0 transition-all ease-in-out duration-300"
-            url="https://github.com/alirezarastineh"
+            url={PERSONAL_INFO.GITHUB_URL}
             fgColor="#F7AB0A"
             bgColor="transparent"
             style={{ opacity: 0.7 }}
             onClick={(e) => {
               e.preventDefault();
-              window.open("https://github.com/alirezarastineh", "_blank");
+              window.open(PERSONAL_INFO.GITHUB_URL, "_blank");
             }}
+            aria-label="Visit Alireza's GitHub profile"
           />
           <SocialIcon
             className="grayscale hover:grayscale-0 transition-all ease-in-out duration-300"
-            url="https://linkedin.com/in/alirezarastineh"
+            url={PERSONAL_INFO.LINKEDIN_URL}
             fgColor="#F7AB0A"
             bgColor="transparent"
             style={{ opacity: 0.7 }}
             onClick={(e) => {
               e.preventDefault();
-              window.open("https://linkedin.com/in/alirezarastineh", "_blank");
+              window.open(PERSONAL_INFO.LINKEDIN_URL, "_blank");
             }}
+            aria-label="Visit Alireza's LinkedIn profile"
           />
 
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              downloadFiles();
-            }}
-            className="uppercase hidden md:inline-flex ml-3 mt-1 text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
+          <button
+            onClick={downloadFiles}
+            className="uppercase hidden md:inline-flex ml-3 mt-1 text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center bg-transparent border-none cursor-pointer"
+            aria-label="Download CV in German"
           >
             Lebenslauf
-          </a>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              downloadFiles();
-            }}
-            className="uppercase md:hidden inline-flex ml-3 mt-1 text-2xl text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center"
+          </button>
+          <button
+            onClick={downloadFiles}
+            className="uppercase md:hidden inline-flex ml-3 mt-1 text-2xl text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300 text-center justify-center bg-transparent border-none cursor-pointer"
+            aria-label="Download CV"
           >
             CV
-          </a>
+          </button>
         </motion.div>
       )}
 
@@ -128,6 +123,7 @@ export default function Header({}: Props) {
             fgColor="#F7AB0A"
             bgColor="transparent"
             style={{ opacity: 0.7 }}
+            aria-label="Go to contact section"
           />
           <p className="uppercase hidden md:inline-flex text-[#F7AB0A]/70 grayscale hover:grayscale-0 transition-all font-bold ease-in-out duration-300">
             Kontakt
@@ -136,4 +132,6 @@ export default function Header({}: Props) {
       )}
     </header>
   );
-}
+});
+
+export default Header;

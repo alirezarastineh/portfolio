@@ -12,9 +12,7 @@ import "swiper/css/keyboard";
 import "../app/globals.css";
 import EducationCard from "./EducationCard";
 
-type Props = {};
-
-export default function Education({}: Props) {
+export default function Education() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,8 +21,9 @@ export default function Education({}: Props) {
       viewport={{ once: true }}
       className="flex flex-col relative h-screen text-left md:text-left md:flex-row max-w-7xl px-7 sm:px-10 justify-evenly mx-auto items-center overflow-hidden"
     >
-      <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
-        Bildung & Erfahrung
+      <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[8px] sm:tracking-[12px] md:tracking-[16px] lg:tracking-[20px] text-gray-500 text-lg sm:text-xl md:text-2xl z-10 text-center w-full px-4">
+        <span className="block sm:hidden">Bildung</span>
+        <span className="hidden sm:block">Bildung & Erfahrung</span>
       </h3>
       <Swiper
         spaceBetween={350}
@@ -140,7 +139,7 @@ export default function Education({}: Props) {
             xxlImageSize="2xl:w-[150px]"
           />
         </SwiperSlide>
-        
+
         <SwiperSlide>
           <EducationCard
             position="Studienkolleg"

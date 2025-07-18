@@ -12,9 +12,47 @@ import Image from "next/image";
 import { projects } from "./Project";
 import { SocialIcon } from "react-social-icons";
 
-type Props = {};
+const getTechAltText = (imageUrl: string): string => {
+  const techMap: { [key: string]: string } = {
+    b0f0L7E: "JavaScript",
+    lmNHoXw: "TypeScript",
+    UZMww1q: "React",
+    IvdoND0: "Next.js",
+    Jx7gRFU: "Node.js",
+    Eonjo5f: "Express.js",
+    AelwhLw: "MongoDB",
+    taH2fNN: "HTML5",
+    "6bxEQ9s": "CSS3",
+    F4QkDAV: "Tailwind CSS",
+    E2gonVz: "Git",
+    LqZKvdX: "GitHub",
+    "7Cq9Dsl": "Python",
+    EMcIArs: "Java",
+    UjFAGog: "C++",
+    pNla9uu: "PHP",
+    "9hO5BKj": "MySQL",
+    X1wfpyX: "PostgreSQL",
+    A15r8O4: "VS Code",
+    zWXFYGT: "Docker",
+    ga59OwL: "Bootstrap",
+    bPdbrAc: "Stripe",
+    xV091Ew: "Prisma",
+    KaDx0On: "Clerk",
+    gWfwVnb: "Zod",
+    iKVvFVh: "Uploadthing",
+    YQFfKJn: "Convex",
+    n29hpWR: "Mux",
+    RhImJ3v: "Cloudinary",
+    LY9fjsQ: "Radix UI",
+    "9fLytGz": "GraphQL",
+  };
 
-export default function Projects({}: Props) {
+  const match = /\/([a-zA-Z0-9]+)\./.exec(imageUrl);
+  const imageId = match?.[1];
+  return imageId ? techMap[imageId] || "Technology" : "Technology";
+};
+
+const Projects = React.memo(function Projects() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,7 +61,7 @@ export default function Projects({}: Props) {
       viewport={{ once: true }}
       className="flex flex-col relative h-screen text-left md:text-left md:flex-row max-w-full px-1 sm:px-28 justify-evenly mx-auto items-center z-0 overflow-hidden"
     >
-      <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[20px] text-gray-500 text-2xl z-10">
+      <h3 className="absolute top-16 sm:top-16 md:top-16 lg:top-12 xl:top-12 2xl:top-20 uppercase tracking-[8px] sm:tracking-[12px] md:tracking-[16px] lg:tracking-[20px] text-gray-500 text-lg sm:text-xl md:text-2xl z-10 text-center w-full px-4">
         Projekte
       </h3>
       <h4 className="absolute text-center justify-center top-36 lg:top-20 xl:top-28 2xl:top-48 uppercase tracking-[5px] text-xs sm:text-base text-gray-500 z-10">
@@ -45,7 +83,7 @@ export default function Projects({}: Props) {
         {projects.map((project, i) => (
           <SwiperSlide key={project.id}>
             <motion.div className="mt-8 flex items-center justify-center h-screen">
-              <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 sm:space-y-3 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
+              <div className="w-screen shrink-0 snap-center flex flex-col space-y-2 sm:space-y-3 items-center justify-center p-20 md:p-44 h-screen scroll-smooth">
                 <motion.div
                   initial={{
                     y: -100,
@@ -82,14 +120,14 @@ export default function Projects({}: Props) {
                     <div className="flex space-x-2 items-center justify-center">
                       {project.images.map((image, index) => (
                         <div
-                          key={index}
+                          key={`${project.id}-image-${index}`}
                           className="relative h-10 w-10 overflow-hidden"
                         >
                           <Image
                             className="absolute inset-0"
                             priority
                             src={image}
-                            alt=""
+                            alt={getTechAltText(image)}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             style={{
@@ -108,6 +146,7 @@ export default function Projects({}: Props) {
                           e.preventDefault();
                           window.open(project.githubUrl, "_blank");
                         }}
+                        aria-label={`View ${project.title} on GitHub`}
                       />
                     </div>
                   </div>
@@ -125,4 +164,6 @@ export default function Projects({}: Props) {
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[300px] sm:h-[500px] lg:h-[300px] xl:h-[350px] -skew-y-12" />
     </motion.div>
   );
-}
+});
+
+export default Projects;
